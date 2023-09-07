@@ -1,7 +1,9 @@
 # codecrafteam
 ## Indroduccion
 
-En la ejecución de la primera práctica, se optó por la herramienta nand2tetris. En un principio, se llevó a cabo una exploración minuciosa de su sitio web y de los recursos disponibles. Se dedicó tiempo a reflexionar acerca de la valiosa utilidad y el material educativo que esta plataforma ofrecía. Esto permitió comprender cómo nand2tetris se convierte en un recurso enriquecedor para adquirir conocimientos adicionales en el ámbito de la arquitectura de computadoras.
+En la ejecución de la primera práctica, se utilizó por la herramienta nand2tetris. En un principio, se llevó a cabo una exploración minuciosa de su sitio web y de los recursos disponibles. Se dedicó tiempo a reflexionar acerca de la valiosa utilidad y el material educativo que esta plataforma ofrecía. Esto permitió comprender cómo nand2tetris se convierte en un recurso enriquecedor para adquirir conocimientos adicionales en el ámbito de la arquitectura de computadoras.
+
+Luego de entender el funcionamiento de la herramienta mencionada se realiza el Project 1: Boolean Logic en el cual se estudiaron las compuertas logicas propuestas y se realizo la practica de codificar en el documento .hdl, se empezo usando la compuerta primitiva NAND y luego se fue avanzando en las siguientes compuertas
 
 ## Compuerta Not 
 
