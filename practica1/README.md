@@ -1,5 +1,5 @@
 # codecrafteam
-## NAND2TETRIS
+## Indroduccion
 
 En la ejecución de la primera práctica, se optó por la herramienta nand2tetris. En un principio, se llevó a cabo una exploración minuciosa de su sitio web y de los recursos disponibles. Se dedicó tiempo a reflexionar acerca de la valiosa utilidad y el material educativo que esta plataforma ofrecía. Esto permitió comprender cómo nand2tetris se convierte en un recurso enriquecedor para adquirir conocimientos adicionales en el ámbito de la arquitectura de computadoras.
 
