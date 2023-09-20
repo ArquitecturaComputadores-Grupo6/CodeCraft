@@ -69,20 +69,23 @@ FullAdder es el sumador que suma tres entradas y produce dos salidas. Las dos pr
 El Full Adder es fundamental en la aritmética binaria y se utiliza para construir sumadores más grandes, como el sumador de 4 bits, el sumador de 8 bits y así sucesivamente. Estos componentes son esenciales en la construcción de circuitos digitales y computadoras para realizar operaciones matemáticas binarias como la adición.
 
 #### Nota:
-Para la realizacion del .hdl se uso una compuerta XOR codificada en la practica anterior donde ingresan dos entradas y se obtiene el LSB, y una compuerta AND con las dos entradas para obtener el MSB 
+Para la realizacion del .hdl se implementaron 2 HalfAdder y una compuerta OR, El primer halfAdder tiene como entrada a y b, sus salida Sum y c van como entradas al segundo halfAdder donde se obtiene otra salida Sum (la del fullAdder) luego para obtener a Carry(del fullAdder) se pasa las salidas Carry de los dos HalfAdder por una compuerta OR.
 
 <pre>
-  /**
- * Computes the sum of two bits.
+/**
+ * Computes the sum of three bits.
  */
-CHIP HalfAdder {
-    IN a, b;    // 1-bit inputs
-    OUT sum,    // Right bit of a + b 
-        carry;  // Left bit of a + b
+
+CHIP FullAdder {
+    IN a, b, c;  // 1-bit inputs
+    OUT sum,     // Right bit of a + b + c
+        carry;   // Left bit of a + b + c
 
     PARTS:
-    	Xor(a=a,b=b,out=sum);
-	    And(a=a,b=b,out=carry);
+  	HalfAdder(a=a,b=b,sum=sum1,carry=car1);
+	HalfAdder(a=c,b=sum1,sum=sum,carry=car2);
+	Or(a=car1,b=car2,out=carry);
+
 }
 </pre>
 ## Referencias
