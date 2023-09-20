@@ -33,6 +33,7 @@ Descripcion
   </ol>
 
 <h2 align="center">Proyecto 2</h2>
+
 ### HalfAdder
 ---
 Un HalfAdder es un circuito lógico digital que realiza la suma binaria de dos números binarios de un solo bit. Tiene dos entradas, A y B, y dos salidas, SUM y CARRY. La salida SUM es el bit menos significativo (LSB) del resultado, mientras que la salida CARRY es el bit más significativo (MSB) del resultado, lo que indica si hubo un arrastre de la suma de las dos entradas. El HalfAdder se puede implementar utilizando puertas básicas como las puertas XOR y AND.
@@ -88,7 +89,7 @@ CHIP FullAdder {
 
 }
 </pre>
-## Referencias
+<h2 align="center"> Referencias</h2>
 [1] https://www.geeksforgeeks.org/half-adder-in-digital-logic/
 [2] https://www.geeksforgeeks.org/full-adder-in-digital-logic/
 [3]
