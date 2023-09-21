@@ -1,9 +1,16 @@
 <h1 align="center">Practica 2: Boolean Arithmetic y Memoria</h1>
 
-Descripcion:
+## ¿Cuál es el objetivo de cada uno de esos proyectos con sus palabras y describa qué debe hacer para desarrollarlo?
+Construir los chips descritos del proyecto 2, estos chips se construyen con los expuestos del proyecto 1, hasta llegar a la Unidad Lógica Aritmética(ALU). Construir los chips del proyecto 3, estos chips se construyen con los expuestos en los proyectos anteriores hasta llegar a una unidad de memoria de acceso aleatorio (RAM).
+
+## Explique las principales diferencias entre la lógica aritmética y la lógica secuencial.
+La lógica aritmética y la lógica secuencial  son dos tipos de lógica digital que se utilizan en el  diseño de circuitos electrónicos. La principal diferencia entre ambas es que la lógica aritmética se utiliza para realizar operaciones matemáticas, mientras la lógica secuencial almacena datos y genera secuencia de salida. 
+La lógica aritmética se utiliza para realizar operaciones matemáticas básicas como lo son suma, resta, multiplicacion y division ya que los circuitos lógicos aritméticos están formados por compuertas lógicas, que son dispositivos electrónicos que realizan operaciones lógicas básicas como AND, OR Y NOT. Los circuitos aritméticos se utilizan en una amplia gama de aplicaciones como: calculadoras, computadoras, sistemas de control, procesadores de señales, entre otras.
+La lógica secuencial se utiliza para almacenar datos y generar secuencias de salida, están formados por Flip-Flops que son dispositivos electrónicos que pueden almacenar un bit de información. Se utilizan en una amplia gama de aplicaciones como: memorias, contadores, registros de desplazamiento, controladores, entre otras. 
+
 
 <p align="center"> Logo e imagen o gif de la interfaz principal de la herramienta</p>
-<p align="center"><img src="https://www.webdevelopersnotes.com/wp-content/uploads/create-a-simple-home-page.png"/></p> 
+<p align="center"><img src="https://arquitecturacomputadores-grupo6.github.io/CodeCraft/practica2/images/inicio.jpg" width="400" height="250"/></p> 
 
 <h2 align="center">Tabla de contenidos:</h2>
 ---
