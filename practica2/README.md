@@ -1,6 +1,6 @@
 <h1 align="center">Practica 2: Boolean Arithmetic y Memoria</h1>
 
-Descripcion
+Descripcion:
 
 <p align="center"> Logo e imagen o gif de la interfaz principal de la herramienta</p>
 <p align="center"><img src="https://www.webdevelopersnotes.com/wp-content/uploads/create-a-simple-home-page.png"/></p> 
