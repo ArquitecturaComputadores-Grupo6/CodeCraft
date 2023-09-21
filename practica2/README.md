@@ -105,27 +105,41 @@ CHIP Add16 {
     IN a[16], b[16];
     OUT out[16];
     PARTS:
-    FullAdder(a=a[0], b=b[0], c=false, sum=out[0], carry=carry1);
-    FullAdder(a=a[1], b=b[1], c=carry1, sum=out[1], carry=carry2);
-    FullAdder(a=a[2], b=b[2], c=carry2, sum=out[2], carry=carry3);
-    FullAdder(a=a[3], b=b[3], c=carry3, sum=out[3], carry=carry4);
-    FullAdder(a=a[4], b=b[4], c=carry4, sum=out[4], carry=carry5);
-    FullAdder(a=a[5], b=b[5], c=carry5, sum=out[5], carry=carry6);
-    FullAdder(a=a[6], b=b[6], c=carry6, sum=out[6], carry=carry7);
-    FullAdder(a=a[7], b=b[7], c=carry7, sum=out[7], carry=carry8);
-    FullAdder(a=a[8], b=b[8], c=carry8, sum=out[8], carry=carry9);
-    FullAdder(a=a[9], b=b[9], c=carry9, sum=out[9], carry=carry10);
-    FullAdder(a=a[10], b=b[10], c=carry10, sum=out[10], carry=carry11);
-    FullAdder(a=a[11], b=b[11], c=carry11, sum=out[11], carry=carry12);
-    FullAdder(a=a[12], b=b[12], c=carry12, sum=out[12], carry=carry13);
-    FullAdder(a=a[13], b=b[13], c=carry13, sum=out[13], carry=carry14);
-    FullAdder(a=a[14], b=b[14], c=carry14, sum=out[14], carry=carry15);
-    FullAdder(a=a[15], b=b[15], c=carry15, sum=out[15], carry=null);
+    FullAdder(a=a[0], b=b[0], c=false, sum=out[0], carry=car1);
+    FullAdder(a=a[1], b=b[1], c=car1, sum=out[1], carry=car2);
+    FullAdder(a=a[2], b=b[2], c=car2, sum=out[2], carry=car3);
+    FullAdder(a=a[3], b=b[3], c=car3, sum=out[3], carry=car4);
+    FullAdder(a=a[4], b=b[4], c=car4, sum=out[4], carry=car5);
+    FullAdder(a=a[5], b=b[5], c=car5, sum=out[5], carry=car6);
+    FullAdder(a=a[6], b=b[6], c=car6, sum=out[6], carry=car7);
+    FullAdder(a=a[7], b=b[7], c=car7, sum=out[7], carry=car8);
+    FullAdder(a=a[8], b=b[8], c=car8, sum=out[8], carry=car9);
+    FullAdder(a=a[9], b=b[9], c=car9, sum=out[9], carry=car10);
+    FullAdder(a=a[10], b=b[10], c=car10, sum=out[10], carry=car11);
+    FullAdder(a=a[11], b=b[11], c=car11, sum=out[11], carry=car12);
+    FullAdder(a=a[12], b=b[12], c=car12, sum=out[12], carry=car13);
+    FullAdder(a=a[13], b=b[13], c=car13, sum=out[13], carry=car14);
+    FullAdder(a=a[14], b=b[14], c=car14, sum=out[14], carry=car15);
+    FullAdder(a=a[15], b=b[15], c=car15, sum=out[15], carry=null);
 }
 </pre>
 
 ### Inc[16]
+Es conveniente tener un chip especial dedicado a agregar el constante 1 a un número dado. Aquí está la especificación de un incrementador de 16 bits:
 
+<pre>
+ * 16-bit incrementer:
+ * out = in + 1 (arithmetic addition)
+ */
+
+CHIP Inc16 {
+    IN in[16];
+    OUT out[16];
+
+    PARTS:
+   // Put you code here:
+}
+</pre>
 <h2 align="center"> Referencias</h2>
 
 [1] https://www.geeksforgeeks.org/half-adder-in-digital-logic/
