@@ -313,6 +313,7 @@ CHIP RAM512 {
 ### Ram16k
 
 ### PC
+
 <pre>
 /**
  * A 16-bit counter with load and reset control bits.
@@ -334,6 +335,7 @@ CHIP PC {
     Mux16(a=mux2, b=false, sel=reset, out=mux3);
 }
 </pre>
+
 <h2 align="center"> Referencias</h2>
 
 [1] https://www.geeksforgeeks.org/half-adder-in-digital-logic/
