@@ -13,9 +13,8 @@ Descripcion
       <ul>
         <li><a href="#halfadder">HalfAdder</a></li>
         <li><a href="#fulladder">FullAdder</a></li>
-        <li><a href="#add16">Add16</a></li>
-        <li><a href="#inc16">Inc16</a></li>
-        <li><a href="#alu-nostat">ALU-nostat</a></li>
+        <li><a href="#add[16]">Add16</a></li>
+        <li><a href="#inc[16]">Inc16</a></li>
         <li><a href="#alu">ALU</a></li>
       </ul>
     </li>
@@ -93,18 +92,18 @@ CHIP FullAdder {
 ### Add[16]
 Los chips de memoria y registro representan números enteros mediante patrones de n bits, n es 16, 32, 64, etc., según la plataforma informática. El chip cuyo trabajo es sumar dichos números se llama sumador multibit, o simplemente sumador. un sumador de 16 bits, teniendo en cuenta que la misma lógica y especificaciones se amplían como está a cualquier sumador de n bits.
 <p align="center"> <img src="https://arquitecturacomputadores-grupo6.github.io/CodeCraft/practica2/images/adder16.png" width="600" height="250" /></p> 
-#### Nota: 
-Para la realizacion del .hdl se emplearon 16 FullAdder en los cuales 
+
+#### Nota:
+Para la realizacion del .hdl se emplearon 16 FullAdder en los cuales el primero no tiene input c, y el carry pasa a ser la entrada c al siguiente FullAdder hasta el ultimo en el cual se anula el carry.
+
 <pre>
-	/**
+/**
  * Adds two 16-bit values.
  * The most significant carry bit is ignored.
  */
-
 CHIP Add16 {
     IN a[16], b[16];
     OUT out[16];
-
     PARTS:
     FullAdder(a=a[0], b=b[0], c=false, sum=out[0], carry=carry1);
     FullAdder(a=a[1], b=b[1], c=carry1, sum=out[1], carry=carry2);
@@ -122,9 +121,11 @@ CHIP Add16 {
     FullAdder(a=a[13], b=b[13], c=carry13, sum=out[13], carry=carry14);
     FullAdder(a=a[14], b=b[14], c=carry14, sum=out[14], carry=carry15);
     FullAdder(a=a[15], b=b[15], c=carry15, sum=out[15], carry=null);
-
 }
 </pre>
+
+### Inc[16]
+
 <h2 align="center"> Referencias</h2>
 
 [1] https://www.geeksforgeeks.org/half-adder-in-digital-logic/
