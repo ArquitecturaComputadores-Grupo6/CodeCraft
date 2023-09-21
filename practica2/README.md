@@ -13,15 +13,15 @@ Descripcion:
       <ul>
         <li><a href="#halfadder">HalfAdder</a></li>
         <li><a href="#fulladder">FullAdder</a></li>
-        <li><a href="#add[16]">Add16</a></li>
-        <li><a href="#inc[16]">Inc16</a></li>
+        <li><a href="#add16">Add16</a></li>
+        <li><a href="#inc16">Inc16</a></li>
         <li><a href="#alu">ALU</a></li>
       </ul>
     </li>
     <li>
       <a>Proyecto 3</a>
       <ul>
-        <li><a href="#built-with">HalfAdder</a></li>
+        <li><a href="deff">DEFF</a></li>
         <li><a href="#usage">FullAdder</a></li>
         <li><a href="#roadmap">Add16</a></li>
         <li><a href="#contributing">Inc16</a></li>
@@ -89,7 +89,7 @@ CHIP FullAdder {
 }
 </pre>
 
-### Add[16]
+### Add16
 Los chips de memoria y registro representan números enteros mediante patrones de n bits, n es 16, 32, 64, etc., según la plataforma informática. El chip cuyo trabajo es sumar dichos números se llama sumador multibit, o simplemente sumador. un sumador de 16 bits, teniendo en cuenta que la misma lógica y especificaciones se amplían como está a cualquier sumador de n bits.
 <p align="center"> <img src="https://arquitecturacomputadores-grupo6.github.io/CodeCraft/practica2/images/adder16.png" width="600" height="250" /></p> 
 
@@ -124,7 +124,7 @@ CHIP Add16 {
 }
 </pre>
 
-### Inc[16]
+### Inc16
 Es conveniente tener un chip especial dedicado a agregar el constante 1 a un número dado. Inc16 es un circuito incrementador de 16 bits que incrementa un número binario de 16 bits en 1. Tiene una entrada, A, y una salida, OUT. La salida OUT es el resultado de incrementar A en 1. 
 <p align="center"> <img src="https://arquitecturacomputadores-grupo6.github.io/CodeCraft/practica2/images/inc16.jpeg" width="400" height="250" /></p> 
 
@@ -155,6 +155,31 @@ La ALU contiene una variedad de conexiones eléctricas de entrada y salida, lo q
 D Flip-Flop ( DFF ), también conocido como Data Flip-Flop (DFF) o Delay Flip-Flop (DFF), es un circuito electrónico digital que se utiliza para retrasar el cambio de estado de su señal de salida (Q) hasta el siguiente aumento. Se produce el flanco de una señal de entrada de temporización de reloj. DFF se emplea como parte de elementos de almacenamiento de memoria y también de procesadores de datos.
 <p align="center"><img src="https://arquitecturacomputadores-grupo6.github.io/CodeCraft/practica2/images/dff.png" width="400" height="250" />
 <img src="https://arquitecturacomputadores-grupo6.github.io/CodeCraft/practica2/images/def.png" width="400" height="250" /></p> 
+
+### Bit
+En informática, bit es la unidad mínima de información. Se utiliza para representar la contraposición entre dos valores (apagado y encendido, falso y verdadero, abierto y cerrado). En telecomunicaciones e informática, los bits son normalmente calculados en conjunto. Así tenemos 8 bits, 16 bits, 32 bits, etc.
+los procesadores que tienen 16, 32 y 64 bits, tienen 16, 32 y 64 registros y capacidad ALU (Unidad aritmético lógica) de 16, 32 y 64 bits, pudiendo por tanto procesar los datos en grupos de bits de idéntica cantidad o submúltiplos de esta.
+<p align="center"><img src="https://arquitecturacomputadores-grupo6.github.io/CodeCraft/practica2/images/bit.PNG" width="400" height="250" /></p> 
+
+#### Nota: 
+Para 1 -bit se tiene en cuenta que la salida de un DEFF en cualquier momento t hará eco de su salida en el momento t 1, produciendo la función clásica esperada de una unidad de almacenamiento. y un Multiplexor antes ya que Están dotados de entradas de control capaces de seleccionar una, y solo una, de las entradas de datos para permitir su transmisión desde la entrada seleccionada hacia dicha salida.
+
+<pre>
+	/**
+ * 1-bit register:
+ * If load[t] == 1 then out[t+1] = in[t]
+ *                 else out does not change (out[t+1] = out[t])
+ */
+
+CHIP Bit {
+    IN in, load;
+    OUT out;
+
+    PARTS:
+    Mux(a=def, b=in, sel=load, out=mux1);
+    DFF(in=mux1, out=def, out=out);
+}
+</pre>
 
 <h2 align="center"> Referencias</h2>
 
