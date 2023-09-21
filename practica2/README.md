@@ -63,8 +63,8 @@ CHIP HalfAdder {
 ### FullAdder
 ---
 FullAdder es el sumador que suma tres entradas y produce dos salidas. Las dos primeras entradas son A y B y la tercera entrada es una entrada transportada como C-IN. El acarreo de salida se designa como C-OUT y la salida normal se designa como S, que es SUM. El C-OUT también se conoce como detector de mayoría 1, cuya salida aumenta cuando más de una entrada está alta. 
-<p align="center"><img src="https://arquitecturacomputadores-grupo6.github.io/CodeCraft/practica2/images/fulladder.PNG" width="600" height="250" />
-<img src="https://arquitecturacomputadores-grupo6.github.io/CodeCraft/practica2/images/fulladdr.PNG" width="400" height="250" /></p> 
+<p align="center"><img src="https://arquitecturacomputadores-grupo6.github.io/CodeCraft/practica2/images/fulladder.PNG" width="400" height="250" />
+<img src="https://arquitecturacomputadores-grupo6.github.io/CodeCraft/practica2/images/fulladdr.PNG" width="600" height="250" /></p> 
 
 El Full Adder es fundamental en la aritmética binaria y se utiliza para construir sumadores más grandes, como el sumador de 4 bits, el sumador de 8 bits y así sucesivamente. Estos componentes son esenciales en la construcción de circuitos digitales y computadoras para realizar operaciones matemáticas binarias como la adición.
 
