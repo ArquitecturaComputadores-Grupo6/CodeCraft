@@ -313,7 +313,27 @@ CHIP RAM512 {
 ### Ram16k
 
 ### PC
+<pre>
+/**
+ * A 16-bit counter with load and reset control bits.
+ * if      (reset[t] == 1) out[t+1] = 0
+ * else if (load[t] == 1)  out[t+1] = in[t]
+ * else if (inc[t] == 1)   out[t+1] = out[t] + 1  (integer addition)
+ * else                    out[t+1] = out[t]
+ */
 
+CHIP PC {
+    IN in[16],load,inc,reset;
+    OUT out[16];
+
+    PARTS:
+    Inc16(in=regis, out=inc);
+    Mux16(a=regis, b=inc, sel=inc, out=mux1);
+    Mux16(a=mux1, b=in, sel=load, out=mux2);
+    Register(in=mux3, load=true, out=out, out=regis);
+    Mux16(a=mux2, b=false, sel=reset, out=mux3);
+}
+</pre>
 <h2 align="center"> Referencias</h2>
 
 [1] https://www.geeksforgeeks.org/half-adder-in-digital-logic/
