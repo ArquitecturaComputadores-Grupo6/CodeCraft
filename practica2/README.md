@@ -126,6 +126,7 @@ CHIP Add16 {
 
 ### Inc[16]
 Es conveniente tener un chip especial dedicado a agregar el constante 1 a un número dado. Inc16 es un circuito incrementador de 16 bits que incrementa un número binario de 16 bits en 1. Tiene una entrada, A, y una salida, OUT. La salida OUT es el resultado de incrementar A en 1. Inc16 se puede implementar utilizando un circuito Add16 y una constante de 1 bit. La constante se establece en 1 y se suma a A usando el circuito Add16. El resultado de la suma es la salida del circuito Inc16.
+<p align="center"> <img src="https://arquitecturacomputadores-grupo6.github.io/CodeCraft/practica2/images/inc16.jpeg" width="400" height="250" /></p> 
 
 <pre>
  * 16-bit incrementer:
