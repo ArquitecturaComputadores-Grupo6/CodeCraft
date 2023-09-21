@@ -399,3 +399,7 @@ CHIP PC {
 [6] https://www.javatpoint.com/what-is-alu
 
 [7] https://www.nand2tetris.org/_files/ugd/44046b_862828b3a3464a809cda6f44d9ad2ec9.pdf
+
+[8] https://github.com/ccckmit/nand2tetris_projects
+
+[9] https://nand2tetris-hdl.github.io/#bit
