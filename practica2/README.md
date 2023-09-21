@@ -142,10 +142,18 @@ CHIP Inc16 {
 
     PARTS:
     Add16(a=in,b[0]=true,out=out);
-}
-
-	
+}	
 </pre>
+
+### ALU
+La ALU contiene una variedad de conexiones eléctricas de entrada y salida, lo que llevó a transmitir las señales digitales entre la electrónica externa y la ALU. La entrada de ALU recibe señales de los circuitos externos y, en respuesta, la electrónica externa recibe señales de salida de ALU.
+
+<h2 align="center">Proyecto 3</h2>
+
+### DEFF
+
+D Flip-Flop ( DFF ), también conocido como Data Flip-Flop (DFF) o Delay Flip-Flop (DFF), es un circuito electrónico digital que se utiliza para retrasar el cambio de estado de su señal de salida (Q) hasta el siguiente aumento. Se produce el flanco de una señal de entrada de temporización de reloj. DFF se emplea como parte de elementos de almacenamiento de memoria y también de procesadores de datos.
+
 <h2 align="center"> Referencias</h2>
 
 [1] https://www.geeksforgeeks.org/half-adder-in-digital-logic/
