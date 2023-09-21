@@ -162,4 +162,11 @@ D Flip-Flop ( DFF ), también conocido como Data Flip-Flop (DFF) o Delay Flip-Fl
 
 [2] https://www.geeksforgeeks.org/full-adder-in-digital-logic/
 
-[3]
+[3] https://tomorrow0w0.gitbooks.io/nand2tetris-homework/content/chapter2/Add16.html
+
+[4] https://www.researchgate.net/figure/a-One-bit-ALU-slice-and-b-its-QCA-implementation_fig4_257321470
+
+[5]https://fullforms.com/DFF/D-Flip-Flop/21395#images
+
+[6] https://www.javatpoint.com/what-is-alu
+
