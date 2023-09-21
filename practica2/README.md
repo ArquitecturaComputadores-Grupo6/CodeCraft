@@ -29,9 +29,12 @@ La lógica secuencial se utiliza para almacenar datos y generar secuencias de sa
         <li><a href="deff">DEFF</a></li>
         <li><a href="#bit">Bit</a></li>
         <li><a href="#registro">Registro</a></li>
-        <li><a href="#contributing">Inc16</a></li>
-        <li><a href="#license">ALU-nostat</a></li>
-        <li><a href="#contact">ALU</a></li>
+        <li><a href="#ram8">Ram8</a></li>
+        <li><a href="#ram64">Ram64</a></li>
+        <li><a href="#ram512">Ram512</a></li>
+	<li><a href="#ram4k">Ram4k</a></li>
+	<li><a href="#ram16k">Ram16k</a></li>
+	<li><a href="#pc">PC</a></li>
       </ul>
     </li>
   </ol>
