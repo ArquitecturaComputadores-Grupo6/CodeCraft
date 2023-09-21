@@ -282,6 +282,32 @@ CHIP RAM64 {
 
 ### Ram512
 
+<pre>
+/**
+ * Memory of 512 registers, each 16 bit-wide. Out holds the value
+ * stored at the memory location specified by address. If load==1, then 
+ * the in value is loaded into the memory location specified by address 
+ * (the loaded value will be emitted to out from the next time step onward).
+ */
+
+CHIP RAM512 {
+    IN in[16], load, address[9];
+    OUT out[16];
+
+    PARTS:
+    DMux8Way(in=load, sel=address[6..8], a=mw1, b=mw2, c=mw3, d=mw4, e=mw5, f=mw6, g=mw7, h=mw8);
+    RAM64(in=in,  load=mw1, address=address[0..5], out=ram1);
+    RAM64(in=in,  load=mw2, address=address[0..5], out=ram2);
+    RAM64(in=in,  load=mw3, address=address[0..5], out=ram3);
+    RAM64(in=in,  load=mw4, address=address[0..5], out=ram4);
+    RAM64(in=in,  load=mw5, address=address[0..5], out=ram5);
+    RAM64(in=in,  load=mw6, address=address[0..5], out=ram6);
+    RAM64(in=in,  load=mw7, address=address[0..5], out=ram7);
+    RAM64(in=in,  load=mw8, address=address[0..5], out=ram8);
+    Mux8Way16(a=ram1, b=ram2, c=ram3, d=ram4, e=ram5, f=ram6, g=ram7, h=ram8, sel=address[6..8], out=out);
+}
+</pre>
+
 ### Ram4k
 
 ### Ram16k
