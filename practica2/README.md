@@ -229,6 +229,8 @@ en una RAM debería poder acceder a palabras elegidas al azar, sin restricciones
 
 <p align="center"><img src="https://arquitecturacomputadores-grupo6.github.io/CodeCraft/practica2/images/ram.PNG" width="400" height="250" /></p> 
 
+Una unidad de memoria de acceso directo, también llamada RAM, es un conjunto de registros de n bits, equipados con circuitos de acceso directo. El número de registros (n) y el ancho de cada registro (w) se denominan tamaño y ancho de la memoria, respectivamente. Ahora nos proponemos construir una jerarquía de dichos dispositivos de memoria, todos de 16 bits de ancho, pero con diferentes tamaños: Unidades RAM8, RAM64, RAM512, RAM4K y RAM16K.
+
 ### Ram8
 
 <pre>
