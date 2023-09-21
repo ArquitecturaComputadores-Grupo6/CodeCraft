@@ -8,8 +8,6 @@ La lógica aritmética y la lógica secuencial  son dos tipos de lógica digital
 La lógica aritmética se utiliza para realizar operaciones matemáticas básicas como lo son suma, resta, multiplicacion y division ya que los circuitos lógicos aritméticos están formados por compuertas lógicas, que son dispositivos electrónicos que realizan operaciones lógicas básicas como AND, OR Y NOT. Los circuitos aritméticos se utilizan en una amplia gama de aplicaciones como: calculadoras, computadoras, sistemas de control, procesadores de señales, entre otras.
 La lógica secuencial se utiliza para almacenar datos y generar secuencias de salida, están formados por Flip-Flops que son dispositivos electrónicos que pueden almacenar un bit de información. Se utilizan en una amplia gama de aplicaciones como: memorias, contadores, registros de desplazamiento, controladores, entre otras. 
 
-
-<p align="center"> Logo e imagen o gif de la interfaz principal de la herramienta</p>
 <p align="center"><img src="https://arquitecturacomputadores-grupo6.github.io/CodeCraft/practica2/images/inicio.jpg" width="400" height="250"/></p> 
 
 <h2 align="center">Tabla de contenidos:</h2>
@@ -29,8 +27,8 @@ La lógica secuencial se utiliza para almacenar datos y generar secuencias de sa
       <a>Proyecto 3</a>
       <ul>
         <li><a href="deff">DEFF</a></li>
-        <li><a href="#usage">FullAdder</a></li>
-        <li><a href="#roadmap">Add16</a></li>
+        <li><a href="#bit">Bit</a></li>
+        <li><a href="#registro">Registro</a></li>
         <li><a href="#contributing">Inc16</a></li>
         <li><a href="#license">ALU-nostat</a></li>
         <li><a href="#contact">ALU</a></li>
