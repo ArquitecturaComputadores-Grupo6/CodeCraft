@@ -154,7 +154,7 @@ La ALU contiene una variedad de conexiones eléctricas de entrada y salida, lo q
 
 D Flip-Flop ( DFF ), también conocido como Data Flip-Flop (DFF) o Delay Flip-Flop (DFF), es un circuito electrónico digital que se utiliza para retrasar el cambio de estado de su señal de salida (Q) hasta el siguiente aumento. Se produce el flanco de una señal de entrada de temporización de reloj. DFF se emplea como parte de elementos de almacenamiento de memoria y también de procesadores de datos.
 <p align="center"><img src="https://arquitecturacomputadores-grupo6.github.io/CodeCraft/practica2/images/dff.png" width="400" height="250" />
-<img src="https://arquitecturacomputadores-grupo6.github.io/CodeCraft/practica2/images/def" width="400" height="250" /></p> 
+<img src="https://arquitecturacomputadores-grupo6.github.io/CodeCraft/practica2/images/def.png" width="400" height="250" /></p> 
 
 <h2 align="center"> Referencias</h2>
 
