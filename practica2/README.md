@@ -155,6 +155,9 @@ CHIP Inc16 {
 
 ### ALU
 La ALU contiene una variedad de conexiones eléctricas de entrada y salida, lo que llevó a transmitir las señales digitales entre la electrónica externa y la ALU. La entrada de ALU recibe señales de los circuitos externos y, en respuesta, la electrónica externa recibe señales de salida de ALU.
+Opera en datos binarios, que consisten en una serie de 0s y 1s, normalmente recibe dos operandos de entrada, realiza la operación solicitada y produce un resultado o dato de salida. También, la ALU puede llegar a generar indicadores o señales que informan sobre condiciones especiales, ya sea el desbordamiento de operaciones aritmética o el resultado de una comparación.
+La ALU es una de las unidades más rápidas de una CPU y es primordial para la ejecución de instruciones de programas y cálculos en la computadora.
+<p align="center"><img src="https://arquitecturacomputadores-grupo6.github.io/CodeCraft/practica2/images/alu.png" width="400" height="250" />
 
 <h2 align="center">Proyecto 3</h2>
 
