@@ -224,6 +224,11 @@ CHIP Register {
 }
 </pre>
 
+<h2 align="center"> Memoria RAM</h2>
+en una RAM debería poder acceder a palabras elegidas al azar, sin restricciones en el orden en que se accede a ellas. Es decir, requerimos que se acceda directamente a cualquier palabra de la memoria, independientemente de su ubicación física, a la misma velocidad. Este requisito puede satisfacerse de la siguiente manera. Primero, asignamos a cada palabra en la RAM del nregister una dirección única (un número entero entre 0 y n 1), según la cual se accederá a ella. En segundo lugar, además de construir una matriz de n registros, construimos un diseño de lógica de puerta que, dada una dirección j, es capaz de seleccionar el registro individual cuya dirección es j. Sin embargo, tenga en cuenta que la noción de "dirección" no es una parte explícita del diseño de la RAM, ya que los registros no están "marcados" con direcciones en ningún sentido físico. Más bien, como veremos más adelante, el chip está equipado con una lógica de acceso directo que implementa la noción de direccionamiento utilizando medios lógicos. En resumen, un dispositivo RAM clásico acepta tres entradas: una entrada de datos, una entrada de dirección y un bit de carga. La dirección especifica a qué registro RAM se debe acceder en la unidad de tiempo actual. En el caso de una operación de lectura (carga = 0), la salida de la RAM emite inmediatamente el valor del registro seleccionado. En el caso de una operación de escritura (carga = 1), el registro de memoria seleccionado se compromete con el valor de entrada en la siguiente unidad de tiempo, momento en el cual la salida de la RAM comenzará a emitirlo. Los parámetros básicos de diseño de un dispositivo RAM son el ancho de sus datos (el ancho de cada una de sus palabras) y su tamaño (el número de palabras en la RAM). Las computadoras modernas suelen emplear RAM de 32 o 64 bits de ancho cuyos tamaños pueden llegar a cientos de millones.
+
+<p align="center"><img src="https://arquitecturacomputadores-grupo6.github.io/CodeCraft/practica2/images/ram.PNG" width="400" height="250" /></p> 
+
 ### Ram8
 
 <pre>
