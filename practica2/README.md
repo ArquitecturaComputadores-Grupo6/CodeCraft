@@ -234,3 +234,4 @@ CHIP Register {
 
 [6] https://www.javatpoint.com/what-is-alu
 
+[7] https://www.nand2tetris.org/_files/ugd/44046b_862828b3a3464a809cda6f44d9ad2ec9.pdf
