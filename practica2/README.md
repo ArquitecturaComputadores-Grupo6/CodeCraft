@@ -137,7 +137,7 @@ CHIP Inc16 {
     OUT out[16];
 
     PARTS:
-   // Put you code here:
+    Add16(a=in,b[0]=true,out=out);
 }
 </pre>
 <h2 align="center"> Referencias</h2>
