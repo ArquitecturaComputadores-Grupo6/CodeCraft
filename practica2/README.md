@@ -92,6 +92,7 @@ CHIP FullAdder {
 
 ### Add[16]
 Los chips de memoria y registro representan números enteros mediante patrones de n bits, n es 16, 32, 64, etc., según la plataforma informática. El chip cuyo trabajo es sumar dichos números se llama sumador multibit, o simplemente sumador. un sumador de 16 bits, teniendo en cuenta que la misma lógica y especificaciones se amplían como está a cualquier sumador de n bits.
+<p align="center"> <img src="https://arquitecturacomputadores-grupo6.github.io/CodeCraft/practica2/images/adder16.png" width="400" height="250" /></p> 
 #### Nota: 
 Para la realizacion del .hdl se emplearon 16 FullAdder en los cuales 
 <pre>
@@ -125,6 +126,9 @@ CHIP Add16 {
 }
 </pre>
 <h2 align="center"> Referencias</h2>
+
 [1] https://www.geeksforgeeks.org/half-adder-in-digital-logic/
+
 [2] https://www.geeksforgeeks.org/full-adder-in-digital-logic/
+
 [3]
