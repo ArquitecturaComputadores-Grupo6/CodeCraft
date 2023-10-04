@@ -111,3 +111,13 @@ Describa el proceso de como armar el codigo aqui
 <pre>
     Ponga su codigo aqui
 </pre>
+
+<h2 align="center"> Referencias</h2>
+
+[1] https://www.nand2tetris.org/course
+
+[2] Nisan, N., & Schocken, S. (2021). The elements of computing systems: building a modern computer from first principles. MIT press.
+
+[3] https://youtu.be/oDrLvsnxIwA?si=TdnhLKZvK7S4rTSx
+
+[4] Building a CPU - From NAND To Tetris, Part 6 (https://youtu.be/kERT8zt61b8?si=iqBnIHcy2-_UJA12)
