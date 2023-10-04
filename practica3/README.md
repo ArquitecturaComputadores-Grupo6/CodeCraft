@@ -26,8 +26,8 @@ El lenguaje de máquina desempeña un papel crítico en la definición de la arq
     <li>
       <a>Proyecto 4</a>
       <ul>
-        <li><a href="#halfadder">HalfAdder</a></li>
-        <li><a href="#fulladder">FullAdder</a></li>
+        <li><a href="#mult">Mult.asm</a></li>
+        <li><a href="#fill">Fill.asm</a></li>
       </ul>
     </li>
     <li>
