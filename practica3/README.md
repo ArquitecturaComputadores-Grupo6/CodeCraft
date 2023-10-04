@@ -26,15 +26,15 @@ El lenguaje de máquina desempeña un papel crítico en la definición de la arq
       <a>Proyecto 4</a>
       <ul>
         <li><a href="#mult.asm">Mult.asm</a></li>
-        <li><a href="#fill">Fill.asm</a></li>
+        <li><a href="#fill.asm">Fill.asm</a></li>
       </ul>
     </li>
     <li>
       <a>Proyecto 5</a>
       <ul>
-        <li><a href="memoria">MEMORIA</a></li>
+        <li><a href="memoria">Memoria</a></li>
         <li><a href="#cpu">CPU</a></li>
-        <li><a href="#computador">COMPUTADOR</a></li>
+        <li><a href="#computador">Computador</a></li>
       </ul>
     </li>
   </ol> 
@@ -46,12 +46,43 @@ El lenguaje de máquina desempeña un papel crítico en la definición de la arq
 
 (Ejemplo de una tarea aritmética): Las entradas de este programa son los valores almacenados en R0 y R1 (RAM[0] y RAM[1]). El programa calcula el producto R0 * R1 y almacena el resultado en R2 (RAM[2]). Supon que R0 ≥ 0, R1 ≥ 0, y R0 * R1 < 32768 (tu programa no necesita verificar estas condiciones). El script Multi.test proporcionado y el archivo de comparación Mult.cmp están diseñados para probar tu programa en algunos valores representativos.
 
-<p align="center"><img src="https://arquitecturacomputadores-grupo6.github.io/CodeCraft/practica3/images/mult.PNG" width="300" height="500" /></p> 
+<p align="center"><img src="https://arquitecturacomputadores-grupo6.github.io/CodeCraft/practica3/images/mult.PNG" width="300" height="400" /></p> 
 
-#### Proceso: Describa el proceso de como armar el codigo aqui
+#### Proceso: 
+Describa el proceso de como armar el codigo aqui
 
 <pre>
     Ponga su codigo aqui
 </pre>
 
+
+### Fill.asm
+
+(Ejemplo de una tarea de entrada/salida): Este programa ejecuta un bucle infinito que escucha el teclado. Cuando se presiona una tecla (cualquier tecla), el programa oscurece toda la pantalla escribiendo "negro" en cada píxel. Cuando no se presiona ninguna tecla, el programa borra la pantalla escribiendo "blanco" en cada píxel. Puedes elegir oscurecer y borrar la pantalla en cualquier patrón espacial, siempre y cuando presionar una tecla continuamente durante el tiempo suficiente resulte en una pantalla completamente oscurecida, y no presionar ninguna tecla durante el tiempo suficiente resulte en una pantalla borrada. Este programa tiene un script de prueba (Fill.tst) pero no un archivo de comparación; debe verificarse inspeccionando visualmente la pantalla simulada en el emulador de CPU.
+
+<p align="center"><img src="https://arquitecturacomputadores-grupo6.github.io/CodeCraft/practica3/images/fill.PNG" width="300" height="400" /></p> 
+
+#### Proceso: 
+Describa el proceso de como armar el codigo aqui
+
+<pre>
+    Ponga su codigo aqui
+</pre>
+
+
 <h2 align="center">Proyecto 5</h2>
+
+<p align="center"><img src="https://arquitecturacomputadores-grupo6.github.io/CodeCraft/practica3/images/vonnewman.png" width="300" height="400" /></p> 
+
+### Memoria
+
+(Ejemplo de una tarea de entrada/salida): Este programa ejecuta un bucle infinito que escucha el teclado. Cuando se presiona una tecla (cualquier tecla), el programa oscurece toda la pantalla escribiendo "negro" en cada píxel. Cuando no se presiona ninguna tecla, el programa borra la pantalla escribiendo "blanco" en cada píxel. Puedes elegir oscurecer y borrar la pantalla en cualquier patrón espacial, siempre y cuando presionar una tecla continuamente durante el tiempo suficiente resulte en una pantalla completamente oscurecida, y no presionar ninguna tecla durante el tiempo suficiente resulte en una pantalla borrada. Este programa tiene un script de prueba (Fill.tst) pero no un archivo de comparación; debe verificarse inspeccionando visualmente la pantalla simulada en el emulador de CPU.
+
+<p align="center"><img src="https://arquitecturacomputadores-grupo6.github.io/CodeCraft/practica3/images/memoria.PNG" width="300" height="400" /></p> 
+
+#### Proceso: 
+Describa el proceso de como armar el codigo aqui
+
+<pre>
+    Ponga su codigo aqui
+</pre>
