@@ -44,9 +44,8 @@ El lenguaje de máquina desempeña un papel crítico en la definición de la arq
 
 ### Mult.asm
 
-(Ejemplo de una tarea aritmética): Las entradas de este programa son los valores almacenados en R0 y R1 (RAM[0] y RAM[1]). El programa calcula el producto R0 * R1 y almacena el resultado en R2 (RAM[2]). Supon que R0 ≥ 0, R1 ≥ 0, y R0 * R1 < 32768 (tu programa no necesita verificar estas condiciones). El script Multi.test proporcionado y el archivo de comparación Mult.cmp están diseñados para probar tu programa en algunos valores representativos.
-
-<p align="center"><img src="https://arquitecturacomputadores-grupo6.github.io/CodeCraft/practica3/images/mult.PNG" width="300" height="400" /></p> 
+<p><img align="right" src="https://arquitecturacomputadores-grupo6.github.io/CodeCraft/practica3/images/mult.PNG" width="300" height="300" />
+(Ejemplo de una tarea aritmética): Las entradas de este programa son los valores almacenados en R0 y R1 (RAM[0] y RAM[1]). El programa calcula el producto R0 * R1 y almacena el resultado en R2 (RAM[2]). Supon que R0 ≥ 0, R1 ≥ 0, y R0 * R1 < 32768 (tu programa no necesita verificar estas condiciones). El script Multi.test proporcionado y el archivo de comparación Mult.cmp están diseñados para probar tu programa en algunos valores representativos.</p> 
 
 #### Proceso: 
 Describa el proceso de como armar el codigo aqui
@@ -58,9 +57,9 @@ Describa el proceso de como armar el codigo aqui
 
 ### Fill.asm
 
+<p><img align="right" src="https://arquitecturacomputadores-grupo6.github.io/CodeCraft/practica3/images/fill.PNG" width="300" height="300" />
 (Ejemplo de una tarea de entrada/salida): Este programa ejecuta un bucle infinito que escucha el teclado. Cuando se presiona una tecla (cualquier tecla), el programa oscurece toda la pantalla escribiendo "negro" en cada píxel. Cuando no se presiona ninguna tecla, el programa borra la pantalla escribiendo "blanco" en cada píxel. Puedes elegir oscurecer y borrar la pantalla en cualquier patrón espacial, siempre y cuando presionar una tecla continuamente durante el tiempo suficiente resulte en una pantalla completamente oscurecida, y no presionar ninguna tecla durante el tiempo suficiente resulte en una pantalla borrada. Este programa tiene un script de prueba (Fill.tst) pero no un archivo de comparación; debe verificarse inspeccionando visualmente la pantalla simulada en el emulador de CPU.
-
-<p align="center"><img src="https://arquitecturacomputadores-grupo6.github.io/CodeCraft/practica3/images/fill.PNG" width="300" height="400" /></p> 
+</p> 
 
 #### Proceso: 
 Describa el proceso de como armar el codigo aqui
@@ -72,13 +71,39 @@ Describa el proceso de como armar el codigo aqui
 
 <h2 align="center">Proyecto 5</h2>
 
-<p align="center"><img src="https://arquitecturacomputadores-grupo6.github.io/CodeCraft/practica3/images/vonnewman.png" width="300" height="400" /></p> 
+<p align="center"><img src="https://arquitecturacomputadores-grupo6.github.io/CodeCraft/practica3/images/vonnewman.png" width="600" height="300" /></p> 
 
 ### Memoria
 
-(Ejemplo de una tarea de entrada/salida): Este programa ejecuta un bucle infinito que escucha el teclado. Cuando se presiona una tecla (cualquier tecla), el programa oscurece toda la pantalla escribiendo "negro" en cada píxel. Cuando no se presiona ninguna tecla, el programa borra la pantalla escribiendo "blanco" en cada píxel. Puedes elegir oscurecer y borrar la pantalla en cualquier patrón espacial, siempre y cuando presionar una tecla continuamente durante el tiempo suficiente resulte en una pantalla completamente oscurecida, y no presionar ninguna tecla durante el tiempo suficiente resulte en una pantalla borrada. Este programa tiene un script de prueba (Fill.tst) pero no un archivo de comparación; debe verificarse inspeccionando visualmente la pantalla simulada en el emulador de CPU.
+Describe que es 
 
-<p align="center"><img src="https://arquitecturacomputadores-grupo6.github.io/CodeCraft/practica3/images/memoria.PNG" width="300" height="400" /></p> 
+<p align="center"><img src="https://arquitecturacomputadores-grupo6.github.io/CodeCraft/practica3/images/memoria.PNG" width="500" height="300" /></p> 
+
+#### Proceso: 
+Describa el proceso de como armar el codigo aqui
+
+<pre>
+    Ponga su codigo aqui
+</pre>
+
+### CPU
+
+Describe que es 
+
+<p align="center"><img src="https://arquitecturacomputadores-grupo6.github.io/CodeCraft/practica3/images/memoria.PNG" width="500" height="300" /></p> 
+
+#### Proceso: 
+Describa el proceso de como armar el codigo aqui
+
+<pre>
+    Ponga su codigo aqui
+</pre>
+
+### Computador
+
+Describe que es 
+
+<p align="center"><img src="https://arquitecturacomputadores-grupo6.github.io/CodeCraft/practica3/images/memoria.PNG" width="500" height="300" /></p> 
 
 #### Proceso: 
 Describa el proceso de como armar el codigo aqui
