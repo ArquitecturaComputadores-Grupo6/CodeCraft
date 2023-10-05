@@ -167,15 +167,28 @@ En el código la sección "KBDCHECK," verifica si se han presionado teclas en el
 
 ### Memoria
 
-Describe que es 
+la "memoria" se refiere específicamente a la memoria principal o RAM (Random Access Memory). En el modelo de von Neumann, la memoria principal es donde se almacenan los datos y programas que la unidad central de procesamiento (CPU) utiliza para realizar cálculos y ejecutar programas. La memoria en este contexto es fundamental porque permite almacenar temporalmente los datos y programas necesarios para el funcionamiento de la computadora. La CPU puede leer y escribir en esta memoria principal para acceder a las instrucciones y los datos que necesita para llevar a cabo las operaciones de procesamiento. Sin la memoria principal, la CPU no tendría acceso rápido a los datos y programas, lo que haría que la ejecución de instrucciones y la operación de la computadora sean extremadamente lentas o incluso imposibles. 
 
 <p align="center"><img src="https://arquitecturacomputadores-grupo6.github.io/CodeCraft/practica3/images/memoria.PNG" width="500" height="400" /></p> 
 
 #### Proceso: 
-Describa el proceso de como armar el codigo aqui
+El chip toma entradas de datos in, señal de carga load, y dirección address, y produce una salida out. Si load está activado, carga el valor in en la dirección especificada en address. Si no, simplemente devuelve el valor almacenado en esa dirección. La memoria para la computadora Hack, que es un ejemplo de una máquina basada en el modelo de von Neumann. En este código, la memoria se organiza en tres partes principales: RAM principal, memoria de pantalla y memoria de teclado, y se accede a ellas según la dirección especificada en address.
 
 <pre>
-    Ponga su codigo aqui
+    CHIP Memory {
+    IN in[16], load, address[15];
+    OUT out[16];
+
+    PARTS:
+    DMux4Way(in=load, sel=address[13..14], a=ramA, b=ramB, c=ScreenIn, d=null);
+    Or(a=ramA, b=ramB, out=ramIn);
+
+    RAM16K(in=in, load=ramIn, address=address[0..13], out=ramOut);
+    Screen(in=in, load=ScreenIn, address=address[0..12], out=screenOut);
+    Keyboard(out=kbdOut);
+
+    Mux4Way16(a=ramOut, b=ramOut, c=screenOut, d=kbdOut, sel=address[13..14], out=out);
+}
 </pre>
 
 ### CPU
