@@ -51,7 +51,6 @@ El lenguaje de máquina desempeña un papel crítico en la definición de la arq
 Se almacena en la ram 2 el resultado en las iteraciones, y durante cada iteracion va sumando el valor de R0 y el numero de iteraciones será el valor de R1, y da como resultado la multiplicacion
 
 <pre>
-  // Put your code here.
 (BEGIN)
 	 //El valor de la posicion 2 de la ram lo establecemos como 0
 	@R2
@@ -89,10 +88,76 @@ Se almacena en la ram 2 el resultado en las iteraciones, y durante cada iteracio
 </p> 
 
 #### Proceso: 
-Describa el proceso de como armar el codigo aqui
+En el código la sección "KBDCHECK," verifica si se han presionado teclas en el teclado, si no se presionan teclas, continúa llenando la pantalla con píxeles blancos y negros alternados bajo las secciones "BLACK" y "WHITE." La sección "CHANGE" se encarga de este llenado, y el programa puede reiniciarse en "RESTART" al finalizar.
 
 <pre>
-    Ponga su codigo aqui
+    (RESTART)
+    @SCREEN
+    D=A
+    @0
+    // Colocamos la dirección de inicio de la pantalla en la posición de memoria RAM 0
+    M=D
+
+(KBDCHECK)
+    // Salta si alguna tecla del teclado está presionada y salta a WHITE si no hay teclas presionadas
+    @KBD
+    D=M
+    @BLACK
+    D;JGT
+    @WHITE
+    D;JEQ
+
+    // Vuelve a KBDCHECK si ninguna condición se cumple
+    @KBDCHECK
+    0;JMP
+
+// Se establece el valor que se usará para llenar la pantalla (negativo, equivalente a 16 bits de unos)
+(BLACK)
+    @1
+    M=-1
+
+    // Salta a CHANGE
+    @CHANGE
+    0;JMP
+
+(WHITE)
+    @1
+    // Establece el valor que se usará para llenar la pantalla (cero)
+    M=0
+
+    // Salta a CHANGE
+    @CHANGE
+    0;JMP
+
+// Carga el valor a utilizar para llenar la pantalla en D (BLACK o WHITE)
+(CHANGE)
+    @1
+    D=M
+
+    // Obtiene la dirección de la pantalla para llenar un píxel y llena el píxel con el valor en D (BLACK o WHITE)
+    @0
+    A=M
+    M=D
+
+    @0
+    // Incrementa la dirección de la pantalla para el siguiente píxel
+    D=M+1
+    @KBD
+    // Calcula la diferencia entre KBD y la dirección de la pantalla
+    D=A-D
+    @0
+    // Incrementa la dirección de la pantalla para el siguiente píxel
+    M=M+1
+    A=M
+
+    @CHANGE
+    // Si A=0, sale del bucle ya que toda la pantalla se ha llenado
+    D;JGT
+
+    // se reinicia
+    @RESTART
+    0;JMP
+
 </pre>
 
 
