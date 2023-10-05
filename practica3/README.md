@@ -48,10 +48,37 @@ El lenguaje de máquina desempeña un papel crítico en la definición de la arq
 (Ejemplo de una tarea aritmética): Las entradas de este programa son los valores almacenados en R0 y R1 (RAM[0] y RAM[1]). El programa calcula el producto R0 * R1 y almacena el resultado en R2 (RAM[2]). Supon que R0 ≥ 0, R1 ≥ 0, y R0 * R1 < 32768 (tu programa no necesita verificar estas condiciones). El script Multi.test proporcionado y el archivo de comparación Mult.cmp están diseñados para probar tu programa en algunos valores representativos.</p> 
 
 #### Proceso: 
-Describa el proceso de como armar el codigo aqui
+Se almacena en la ram 2 el resultado en las iteraciones, y durante cada iteracion va sumando el valor de R0 y el numero de iteraciones será el valor de R1, y da como resultado la multiplicacion
 
 <pre>
-    Ponga su codigo aqui
+  // Put your code here.
+(BEGIN)
+	 //El valor de la posicion 2 de la ram lo establecemos como 0
+	@R2
+	M=0
+(LOOP)
+	// Condicion de salida del ciclo, si R1 <= 0, termina el ciclo
+	@R1
+	D=M
+	@END
+	D;JLE
+	// Se suma el valor de R0 a R2
+	@R0
+	D=M
+	@R2
+	M=M+D
+	// Decrecemos el valor de R1
+	@R1
+	M=M-1
+	//Se indica que se vuelve a iniciar el ciclo
+	@LOOP
+	0;JMP
+(END)
+	// Termina la ejecucion
+	@END
+	0;JMP
+  
+    
 </pre>
 
 
