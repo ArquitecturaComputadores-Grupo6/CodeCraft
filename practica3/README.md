@@ -303,3 +303,9 @@ Teniendo en cuenta lo anterior, para iniciar la ejecuación de un programa hay q
 [3] https://youtu.be/oDrLvsnxIwA?si=TdnhLKZvK7S4rTSx
 
 [4] Building a CPU - From NAND To Tetris, Part 6 (https://youtu.be/kERT8zt61b8?si=iqBnIHcy2-_UJA12)
+
+[5] CPU (https://courses.cs.washington.edu/courses/cse390b/21sp/readings/hack_cpu_chips.html)
+
+[6] Definicion CPU (https://en.wikipedia.org/wiki/Central_processing_unit)
+
+[7] https://www.youtube.com/watch?v=xHh2GdJl4Cs
