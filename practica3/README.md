@@ -195,7 +195,7 @@ los Mux4Way16 se utilizan para seleccionar entre varias fuentes de datos (por ej
 ### CPU
 
 CPU (Central Processing Unit) suele ser un único chip de circuito integrado, pero también puede estar formada por varios chips. Es el procesador más importante de una computadora determinada. Su circuito electrónico ejecuta instrucciones de un programa de computadora, como operaciones aritméticas, lógicas, de control y de entrada/salida. 
-<p align="center"><img src="https://arquitecturacomputadores-grupo6.github.io/CodeCraft/practica3/images/cpu.png" width="500" height="300" /></p> 
+<p align="center"><img src="https://arquitecturacomputadores-grupo6.github.io/CodeCraft/practica3/images/cpu.png" width="700" height="500" /></p> 
 
 #### Proceso: 
 La CPU se compone de dos partes principales: la unidad de control (CU) y la unidad aritmética lógica (ALU). Hay algunos chips que sabemos que necesitaremos para la implementación de nuestra CPU. 
