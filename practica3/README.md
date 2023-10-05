@@ -200,7 +200,7 @@ La computadora que se realiza en este proyecto es lo más simple posible, basada
 #### Proceso: 
 La computadora incluye CPU, ROM y RAM. 
 Cuando el reset es 0, se ejecuta el programa almacenado en la ROM del computador, en cambio cuando el reset es 1, se reinicia la ejecución del programa.
-Teniendo en cuenta lo anteior, para iniciar la ejecuación de un programa hay que pulsar reset "arriba" (1) y "abajo" (0). Dependiendo del código del programa, la pantalla puede mostrar alguna salida y el usuario puede interactuar con el computador a través del teclado.
+Teniendo en cuenta lo anterior, para iniciar la ejecuación de un programa hay que pulsar reset "arriba" (1) y "abajo" (0). Dependiendo del código del programa, la pantalla puede mostrar alguna salida y el usuario puede interactuar con el computador a través del teclado.
 
 <pre>
     CHIP Computer {
