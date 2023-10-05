@@ -193,7 +193,7 @@ Describa el proceso de como armar el codigo aqui
 
 ### Computador
 
-Describe que es 
+La computadora que se realiza en este proyecto es lo más simple posible, basada en un hardware mínimo y compacto. Sin embargo, esta configuración es lo suficientemente potente para ejecutar programas escritos en un lenguaje de programación similar a java, ofreciendo un rendimiento razonable y una experiencia de usuario satisfactoria.
 
 <p align="center"><img src="https://arquitecturacomputadores-grupo6.github.io/CodeCraft/practica3/images/computer.PNG" width="500" height="300" /></p> 
 
@@ -201,7 +201,26 @@ Describe que es
 Describa el proceso de como armar el codigo aqui
 
 <pre>
-    Ponga su codigo aqui
+    CHIP Computer {
+
+    IN reset;
+
+    PARTS:
+    CPU(inM=loadFromMem,
+	instruction=romOut,
+	reset=reset,
+	outM=storeMem,
+	writeM=writeMem,
+	adressM=adressMem,
+	pc=pcOut);
+
+    Memory(in=storeMem,
+	   load=writeMem,
+	   adress=adressMem,
+	   out=loadFromMem);
+
+    ROM32K(adress=pcOut, out=romOut);
+}
 </pre>
 
 <h2 align="center"> Referencias</h2>
