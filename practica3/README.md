@@ -172,8 +172,9 @@ la "memoria" se refiere específicamente a la memoria principal o RAM (Random Ac
 <p align="center"><img src="https://arquitecturacomputadores-grupo6.github.io/CodeCraft/practica3/images/memoria.PNG" width="500" height="400" /></p> 
 
 #### Proceso: 
-El chip toma entradas de datos in, señal de carga load, y dirección address, y produce una salida out. Si load está activado, carga el valor in en la dirección especificada en address. Si no, simplemente devuelve el valor almacenado en esa dirección. La memoria para la computadora Hack, que es un ejemplo de una máquina basada en el modelo de von Neumann. En este código, la memoria se organiza en tres partes principales: RAM principal, memoria de pantalla y memoria de teclado, y se accede a ellas según la dirección especificada en address.
-
+El chip toma entradas de datos in, señal de carga load, y dirección address, y produce una salida out. Si load está activado, carga el valor in en la dirección especificada en address. Si no, simplemente devuelve el valor almacenado en esa dirección. La memoria para la computadora Hack, que es un ejemplo de una máquina basada en el modelo de von Neumann. En este código, la memoria se organiza en tres partes principales: RAM principal, memoria de pantalla y memoria de teclado, y se accede a ellas según la dirección especificada en address. 
+los Mux4Way16 se utilizan para seleccionar entre varias fuentes de datos (por ejemplo, RAM, pantalla, teclado) basándose en las dos bits más significativos de la dirección (address[13..14]).
+<p align="center"><img src="https://arquitecturacomputadores-grupo6.github.io/CodeCraft/practica3/images/memor.png" width="500" height="400" /></p> 
 <pre>
     CHIP Memory {
     IN in[16], load, address[15];
@@ -283,7 +284,7 @@ La computadora que se realiza en este proyecto es lo más simple posible, basada
 La computadora incluye CPU, ROM y RAM. 
 Cuando el reset es 0, se ejecuta el programa almacenado en la ROM del computador, en cambio cuando el reset es 1, se reinicia la ejecución del programa.
 Teniendo en cuenta lo anterior, para iniciar la ejecuación de un programa hay que pulsar reset "arriba" (1) y "abajo" (0). Dependiendo del código del programa, la pantalla puede mostrar alguna salida y el usuario puede interactuar con el computador a través del teclado.
-
+<p align="center"><img src="https://arquitecturacomputadores-grupo6.github.io/CodeCraft/practica3/images/pc.png" width="500" height="400" /></p> 
 <pre>
     CHIP Computer {
 
