@@ -180,11 +180,11 @@ Describa el proceso de como armar el codigo aqui
 
 ### CPU
 
-CPU (Central Processing Unit) suele ser un único chip de circuito integrado, pero también puede estar formada por varios chips. Es el procesador más importante de una computadora determinada. Su circuito electrónico ejecuta instrucciones de un programa de computadora, como operaciones aritméticas, lógicas, de control y de entrada/salida. La CPU se compone de dos partes principales: la unidad de control (CU) y la unidad aritmética lógica (ALU). Hay algunos chips que sabemos que necesitaremos para la implementación de nuestra CPU. 
-
+CPU (Central Processing Unit) suele ser un único chip de circuito integrado, pero también puede estar formada por varios chips. Es el procesador más importante de una computadora determinada. Su circuito electrónico ejecuta instrucciones de un programa de computadora, como operaciones aritméticas, lógicas, de control y de entrada/salida. 
 <p align="center"><img src="https://arquitecturacomputadores-grupo6.github.io/CodeCraft/practica3/images/cpu.png" width="500" height="300" /></p> 
 
 #### Proceso: 
+La CPU se compone de dos partes principales: la unidad de control (CU) y la unidad aritmética lógica (ALU). Hay algunos chips que sabemos que necesitaremos para la implementación de nuestra CPU. 
 Aquí hay una lista de estos componentes principales:  A Register: Para almacenar valores en nuestro registro A, D Register: Para almacenar valores en nuestro registro D, ALU: Para realizar cálculos, Program Counter (PC): Para realizar un seguimiento del control de flujo.
 
 <pre>
