@@ -198,7 +198,9 @@ La computadora que se realiza en este proyecto es lo más simple posible, basada
 <p align="center"><img src="https://arquitecturacomputadores-grupo6.github.io/CodeCraft/practica3/images/computer.PNG" width="500" height="300" /></p> 
 
 #### Proceso: 
-Describa el proceso de como armar el codigo aqui
+La computadora incluye CPU, ROM y RAM. 
+Cuando el reset es 0, se ejecuta el programa almacenado en la ROM del computador, en cambio cuando el reset es 1, se reinicia la ejecución del programa.
+Teniendo en cuenta lo anteior, para iniciar la ejecuación de un programa hay que pulsar reset "arriba" (1) y "abajo" (0). Dependiendo del código del programa, la pantalla puede mostrar alguna salida y el usuario puede interactuar con el computador a través del teclado.
 
 <pre>
     CHIP Computer {
