@@ -16,8 +16,7 @@ el Ensamblador enfrenta una serie de limitaciones notables en comparación con l
 Un ensamblador crea código objeto traduciendo instrucciones mnemónicas a códigos operativos, y resolviendo los nombres simbólicos para posiciones de memoria y otras entidades. El uso de referencias simbólicas es una característica básica de los ensambladores, evitando tediosos cálculos y direccionamiento manual luego de cada modificación del programa. La mayoría de los ensambladores también incluyen facilidades para crear macros, a fin de generar series de instrucciones cortas que se ejecutan en tiempo real, en lugar de utilizar subrutinas.
 
 ### ENSAMBLADOR
-
-<p align="center"> <img src="https://arquitecturacomputadores-grupo6.github.io/CodeCraft/practica4/images/compDestSim.PNG" width="600" height="600" /></p>
+<p align="center"> <img src="https://arquitecturacomputadores-grupo6.github.io/CodeCraft/practica4/images/assembler.PNG" width="600" height="600" /></p>
 
 ## Assembler:
 La clase Assembler integra la lógica principal de su programa, porque define el método principal que es el punto de entrada. Esta clase es responsable de la creación de instancias de los objetos de clase TablaSymbolos, Code y Parser. Además, la carga de leer y manipular un archivo de código ensamblador está condicionada a realizar operaciones para escribir los resultados en un archivo de salida. Esta característica es un largo camino para abrir el botón de comando tipo A y C en el dispositivo.
@@ -252,6 +251,8 @@ public class Parser {
 
 ## Código:
 La clase Code juega un papel fundamental al definir los mapeos esenciales utilizados para los campos de destino, cálculo y salto dentro de los comandos de tipo C. Proporciona métodos para obtener los códigos binarios correspondientes a estos campos, asegurando así la correcta interpretación de los comandos de tipo C dentro del contexto del lenguaje ensamblador.
+
+<p align="center"> <img src="https://arquitecturacomputadores-grupo6.github.io/CodeCraft/practica4/images/compDestSim.PNG" width="600" height="600" /></p>
 
 ```ruby
 import java.util.Map;
