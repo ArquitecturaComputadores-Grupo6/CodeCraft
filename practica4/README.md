@@ -432,6 +432,7 @@ Calcula max(R0, R1) y coloca el resultado en R2.
    0;JMP            // infinite loop
 ```
 ### Rect.asm: 
+Rect es un programa de lenguaje de ensamblador de que se utilizar para dibujar gráficos simples. El programa se encarga de cambiar los valores de los píxeles en la pantalla para dibujar un rectángulo con las dimensiones especificadas en la ubicación especificada en la pantalla.
 Dibuja un rectángulo en la esquina superior izquierda de la pantalla. El rectángulo tiene 16 píxeles de ancho y R0 píxeles de alto. Antes de ejecutar este programa, coloca un valor no negativo en R0.
 ```ruby
    @0
