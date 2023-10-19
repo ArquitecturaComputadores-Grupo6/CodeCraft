@@ -2,7 +2,7 @@
 
 Make everything as simple as possible, but not simpler.
 —Albert Einstein (1879–1955)
-
+Como hemos visto en los anteriores proyectos, la cpu solo "entiende" lenguaje de maquina osea bits (1 y 0) por lo cual se dificulata el manejo a la hora de trabajar con los dispositivos es por esto que surge el lenguaje ensamblador como una solucion al problema de manejar el complicado y extenso lenguaje maquina
 
 <h2 align="center">Teniendo en cuenta las características del ensamblador, ¿Cuál es la principal limitante que observan? Justifique su respuesta. </h2>
 
