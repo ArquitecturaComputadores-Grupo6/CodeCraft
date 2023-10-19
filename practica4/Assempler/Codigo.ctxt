@@ -1,9 +1,0 @@
-#BlueJ class context
-comment0.target=Codigo
-comment1.params=mnemonico
-comment1.target=java.lang.String\ destino(java.lang.String)
-comment2.params=mnemonico
-comment2.target=java.lang.String\ comp(java.lang.String)
-comment3.params=mnemonico
-comment3.target=java.lang.String\ salto(java.lang.String)
-numComments=4
