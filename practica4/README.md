@@ -381,7 +381,7 @@ public class TablaSimbolos {
 }
 ```
 
-# Tipo de orden:
+## Tipo de orden:
 TipoComando es un tipo de enumeración que es un papel crucial para definir y especificar los diferentes tipos de comandos que puedes encontrar en el lenguaje ensamblador. Tipos de comando definidos A_COMMAND, L_COMMAND y C_COMMAND, para facilitar la identificación y gestión detallada de diferentes tipos de comandos para completar el código de análisis e identificación.
 
 ```ruby
