@@ -392,7 +392,14 @@ public enum TipoComando{
 ```
 
 ### Add.asm: 
-Suma las constantes 2 y 3 y coloca el resultado en R0.
+Suma las constantes 2 y 3 y coloca el resultado en R0. El código funciona de la siguiente manera:
+
+La primera instrucción carga el valor 2 en el registro D.
+La segunda instrucción suma el valor del registro D al valor del registro A y almacena el resultado en el registro D.
+La tercera instrucción almacena el valor en el registro D en la ubicación de memoria 0.
+Una vez que el código haya terminado de ejecutarse, el valor 5 se almacenará en la ubicación de memoria 0.
+
+Este es un ejemplo muy simple de cómo sumar dos números usando lenguaje ensamblador.
 ```ruby
 @2
 D=A
