@@ -7,7 +7,8 @@ Como hemos visto en los anteriores proyectos, la cpu solo "entiende" lenguaje de
  
 Los programadores rara vez escriben programas directamente en lenguaje de máquina. En cambio, los programadores que desarrollan programas de alto rendimiento (por ejemplo, software de sistema, aplicaciones críticas y software para sistemas integrados) a menudo inspeccionan el código de ensamblaje generado por los compiladores. Lo hacen para comprender cómo su código de alto nivel se implementa realmente en el hardware y cómo ese código puede optimizarse para obtener un mejor rendimiento. Uno de los actores en este proceso es el programa que traduce el código escrito en un lenguaje simbólico de máquina en código escrito en lenguaje binario de máquina. Este programa se llama ensamblador.
 
-<img align="center" src="https://arquitecturacomputadores-grupo6.github.io/CodeCraft/practica4/images/ensamblador.PNG" width="300" height="300" />
+<p align="center"> <img src="https://arquitecturacomputadores-grupo6.github.io/CodeCraft/practica4/images/ensamblador.PNG" width="300" height="300" /></p>
+
 <h2 align="center">Teniendo en cuenta las características del ensamblador, ¿Cuál es la principal limitante que observan? Justifique su respuesta. </h2>
 
 
