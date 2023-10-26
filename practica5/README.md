@@ -32,7 +32,9 @@ Make everything as simple as possible, but not simpler.
 <h2 align="center">Proyecto 7</h2>
 
 ### ...
-
+```ruby
+    input code
+```
 #### Proceso: 
 Se almacena en la ram 2 el resultado en las iteraciones, y durante cada iteracion va sumando el valor de R0 y el numero de iteraciones será el valor de R1, y da como resultado la multiplicacion
 
