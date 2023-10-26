@@ -1,1 +1,58 @@
-dd
+<h1 align="center">Practica 3: </h1>
+
+Make everything as simple as possible, but not simpler.
+—Albert Einstein (1879–1955)
+
+
+<p align="center"> <img src="https://arquitecturacomputadores-grupo6.github.io/CodeCraft/practica5/images/lenguajemaquina.PNG" width="700" height="250"/></p>
+
+<h2 align="center">Teniendo en cuenta el marco de estas dos prácticas que son las máquinas virtuales. ¿Cuál cree que es el futuro de las máquinas virtuales? </h2>
+
+<h2 align="center">Tabla de contenidos:</h2>
+<p align="center"> 
+  <ol>
+    <li>
+      <a>Proyecto 7</a>
+      <ul>
+        <li><a href="#mult">Mult</a></li>
+        <li><a href="#fill">Fill</a></li>
+      </ul>
+    </li>
+    <li>
+      <a>Proyecto 8</a>
+      <ul>
+        <li><a href="#memoria">Memoria</a></li>
+        <li><a href="#cpu">CPU</a></li>
+        <li><a href="#computador">Computador</a></li>
+      </ul>
+    </li>
+  </ol> 
+  </p>
+  
+<h2 align="center">Proyecto 7</h2>
+
+### ...
+
+#### Proceso: 
+Se almacena en la ram 2 el resultado en las iteraciones, y durante cada iteracion va sumando el valor de R0 y el numero de iteraciones será el valor de R1, y da como resultado la multiplicacion
+
+
+
+
+<h2 align="center">Proyecto 8</h2>
+
+<p align="center"><img src="https://arquitecturacomputadores-grupo6.github.io/CodeCraft/practica5/images/vonnewman.png" width="600" height="300" /></p> 
+
+### ...
+
+<h2 align="center"> Referencias</h2>
+
+[1] https://www.nand2tetris.org/course
+
+[2] Nisan, N., & Schocken, S. (2021). The elements of computing systems: building a modern computer from first principles. MIT press.
+
+[3] https://youtu.be/oDrLvsnxIwA?si=TdnhLKZvK7S4rTSx
+
+[4] Building a CPU - From NAND To Tetris, Part 6 (https://youtu.be/kERT8zt61b8?si=iqBnIHcy2-_UJA12)
+
+[5] CPU (https://courses.cs.washington.edu/courses/cse390b/21sp/readings/hack_cpu_chips.html)
