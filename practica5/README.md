@@ -37,7 +37,7 @@ Make everything as simple as possible, but not simpler.
 ```
 #### Proceso: 
 
-Para el traductor VM se implementaran 9 comandos aritmeticos = ["add", "sub", "neg", "eq", "gt", It", "and, "or", "not"]
+Para el traductor VM se implementaran 9 comandos aritmeticos = ["add", "sub", "neg", "eq", "gt", lt", "and, "or", "not"], Tambien contiene los comandos de accesso a memoria ["push", "pop"] y 8 segmentos de memoria ["constant", "static", "local", "argument", "pointer", "temp", "this", "that"]
 
 <h2 align="center">Proyecto 8</h2>
 
