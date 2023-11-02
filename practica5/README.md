@@ -282,7 +282,272 @@ Main: lee el archivo .vm línea por línea, escribe el código de ensamblador tr
 
 <p align="center"><img src="https://arquitecturacomputadores-grupo6.github.io/CodeCraft/practica5/images/pila.PNG" width="600" height="300" /></p> 
 
-### ...
+### Código full-scale VMTranslator (JAVA)
+```ruby
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.HashMap;
+
+class Parser {
+    private BufferedReader vmFile;
+    private String currentCommand;
+
+    public Parser(String pathToVmFile) throws IOException {
+        vmFile = new BufferedReader(new FileReader(pathToVmFile));
+    }
+
+    public boolean hasMoreCommands() throws IOException {
+        return vmFile.ready();
+    }
+
+    public void advance() throws IOException {
+        currentCommand = vmFile.readLine().replaceAll("/\\.+|\n|\r", "");
+    }
+
+    public String getCommandType() {
+        String[] splitCommand = currentCommand.split(" ");
+        return splitCommand[0];
+    }
+
+    public String getArg1() {
+        String[] splitCommand = currentCommand.split(" ");
+        return splitCommand[1];
+    }
+
+    public int getArg2() {
+        String[] splitCommand = currentCommand.split(" ");
+        return Integer.parseInt(splitCommand[2]);
+    }
+
+    public void close() throws IOException {
+        vmFile.close();
+    }
+}
+
+class CodeWriter {
+    private FileWriter asmFile;
+    private int labelCount;
+    private String currentFunction;
+
+    public CodeWriter(String pathToAsmFile) throws IOException {
+        asmFile = new FileWriter(pathToAsmFile);
+        labelCount = 0;
+        currentFunction = "";
+    }
+
+    public void setFileName(String fileName) {
+        currentFunction = fileName;
+    }
+
+    public void writeArithmetic(String command) throws IOException {
+        switch (command) {
+            case "add":
+                asmFile.write("@SP\nAM=M-1\nD=M\nA=A-1\nM=D+M\n");
+                break;
+            case "sub":
+                asmFile.write("@SP\nAM=M-1\nD=M\nA=A-1\nM=M-D\n");
+                break;
+            case "neg":
+                asmFile.write("@SP\nA=M-1\nM=-M\n");
+                break;
+            case "eq":
+                asmFile.write("@SP\nAM=M-1\nD=M\nA=A-1\nD=M-D\n@LABEL" + labelCount + "\nD;JEQ\n@SP\nA=M-1\nM=0\n@END" + labelCount + "\n0;JMP\n(LABEL" + labelCount + ")\n@SP\nA=M-1\nM=-1\n(END" + labelCount + ")\n");
+                labelCount++;
+                break;
+            case "gt":
+                asmFile.write("@SP\nAM=M-1\nD=M\nA=A-1\nD=M-D\n@LABEL" + labelCount + "\nD;JGT\n@SP\nA=M-1\nM=0\n@END" + labelCount + "\n0;JMP\n(LABEL" + labelCount + ")\n@SP\nA=M-1\nM=-1\n(END" + labelCount + ")\n");
+                labelCount++;
+                break;
+            case "lt":
+                asmFile.write("@SP\nAM=M-1\nD=M\nA=A-1\nD=M-D\n@LABEL" + labelCount + "\nD;JLT\n@SP\nA=M-1\nM=0\n@END" + labelCount + "\n0;JMP\n(LABEL" + labelCount + ")\n@SP\nA=M-1\nM=-1\n(END" + labelCount + ")\n");
+                labelCount++;
+                break;
+            case "and":
+                asmFile.write("@SP\nAM=M-1\nD=M\nA=A-1\nM=D&M\n");
+                break;
+            case "or":
+                asmFile.write("@SP\nAM=M-1\nD=M\nA=A-1\nM=D|M\n");
+                break;
+            case "not":
+                asmFile.write("@SP\nA=M-1\nM=!M\n");
+                break;
+        }
+    }
+
+    public void writePushPop(String command, String segment, int index) throws IOException {
+        switch (command) {
+            case "push":
+                switch (segment) {
+                    case "constant":
+                        asmFile.write("@" + index + "\nD=A\n@SP\nA=M\nM=D\n@SP\nM=M+1\n");
+                        break;
+                    case "local":
+                        asmFile.write("@" + index + "\nD=A\n@LCL\nA=M+D\nD=M\n@SP\nA=M\nM=D\n@SP\nM=M+1\n");
+                        break;
+                    case "argument":
+                        asmFile.write("@" + index + "\nD=A\n@ARG\nA=M+D\nD=M\n@SP\nA=M\nM=D\n@SP\nM=M+1\n");
+                        break;
+                    case "this":
+                        asmFile.write("@" + index + "\nD=A\n@THIS\nA=M+D\nD=M\n@SP\nA=M\nM=D\n@SP\nM=M+1\n");
+                        break;
+                    case "that":
+                        asmFile.write("@" + index + "\nD=A\n@THAT\nA=M+D\nD=M\n@SP\nA=M\nM=D\n@SP\nM=M+1\n");
+                        break;
+                    case "temp":
+                        asmFile.write("@" + (5 + index) + "\nD=M\n@SP\nA=M\nM=D\n@SP\nM=M+1\n");
+                        break;
+                    case "pointer":
+                        if (index == 0) {
+                            asmFile.write("@THIS\nD=M\n@SP\nA=M\nM=D\n@SP\nM=M+1\n");
+                        } else {
+                            asmFile.write("@THAT\nD=M\n@SP\nA=M\nM=D\n@SP\nM=M+1\n");
+                        }
+                        break;
+                    case "static":
+                        asmFile.write("@" + currentFunction + "." + index + "\nD=M\n@SP\nA=M\nM=D\n@SP\nM=M+1\n");
+                        break;
+                }
+                break;
+            case "pop":
+                switch (segment) {
+                    case "local":
+                        asmFile.write("@" + index + "\nD=A\n@LCL\nD=M+D\n@R13\nM=D\n@SP\nAM=M-1\nD=M\n@R13\nA=M\nM=D\n");
+                        break;
+                    case "argument":
+                        asmFile.write("@" + index + "\nD=A\n@ARG\nD=M+D\n@R13\nM=D\n@SP\nAM=M-1\nD=M\n@R13\nA=M\nM=D\n");
+                        break;
+                    case "this":
+                        asmFile.write("@" + index + "\nD=A\n@THIS\nD=M+D\n@R13\nM=D\n@SP\nAM=M-1\nD=M\n@R13\nA=M\nM=D\n");
+                        break;
+                    case "that":
+                        asmFile.write("@" + index + "\nD=A\n@THAT\nD=M+D\n@R13\nM=D\n@SP\nAM=M-1\nD=M\n@R13\nA=M\nM=D\n");
+                        break;
+                    case "temp":
+                        asmFile.write("@SP\nAM=M-1\nD=M\n@" + (5 + index) + "\nM=D\n");
+                        break;
+                    case "pointer":
+                        if (index == 0) {
+                            asmFile.write("@SP\nAM=M-1\nD=M\n@THIS\nM=D\n");
+                        } else {
+                            asmFile.write("@SP\nAM=M-1\nD=M\n@THAT\nM=D\n");
+                        }
+                        break;
+                    case "static":
+                        asmFile.write("@SP\nAM=M-1\nD=M\n@" + currentFunction + "." + index + "\nM=D\n");
+                        break;
+                }
+                break;
+        }
+    }
+
+    public void writeInit() throws IOException {
+        asmFile.write("@256\nD=A\n@SP\nM=D\n");
+        writeCall("Sys.init", 0);
+    }
+
+    public void writeLabel(String label) throws IOException {
+        asmFile.write("(" + currentFunction + "$" + label + ")\n");
+    }
+
+    public void writeGoto(String label) throws IOException {
+        asmFile.write("@" + currentFunction + "$" + label + "\n0;JMP\n");
+    }
+
+    public void writeIf(String label) throws IOException {
+        asmFile.write("@SP\nAM=M-1\nD=M\n@" + currentFunction + "$" + label + "\nD;JNE\n");
+    }
+
+    public void writeCall(String functionName, int numArgs) throws IOException {
+        String returnLabel = "RETURN_LABEL" + labelCount;
+        labelCount++;
+        asmFile.write("@" + returnLabel + "\nD=A\n@SP\nA=M\nM=D\n@SP\nM=M+1\n");
+        asmFile.write("@LCL\nD=M\n@SP\nA=M\nM=D\n@SP\nM=M+1\n");
+        asmFile.write("@ARG\nD=M\n@SP\nA=M\nM=D\n@SP\nM=M+1\n");
+        asmFile.write("@THIS\nD=M\n@SP\nA=M\nM=D\n@SP\nM=M+1\n");
+        asmFile.write("@THAT\nD=M\n@SP\nA=M\nM=D\n@SP\nM=M+1\n");
+        asmFile.write("@SP\nD=M\n@" + (numArgs + 5) + "\nD=D-A\n@ARG\nM=D\n");
+        asmFile.write("@SP\nD=M\n@LCL\nM=D\n");
+        asmFile.write("@" + functionName + "\n0;JMP\n");
+        asmFile.write("(" + returnLabel + ")\n");
+    }
+
+    public void writeReturn() throws IOException {
+        asmFile.write("@LCL\nD=M\n@R13\nM=D\n");
+        asmFile.write("@5\nA=D-A\nD=M\n@R14\nM=D\n");
+        asmFile.write("@SP\nAM=M-1\nD=M\n@ARG\nA=M\nM=D\n");
+        asmFile.write("D=A+1\n@SP\nM=D\n");
+        asmFile.write("@R13\nAM=M-1\nD=M\n@THAT\nM=D\n");
+        asmFile.write("@R13\nAM=M-1\nD=M\n@THIS\nM=D\n");
+        asmFile.write("@R13\nAM=M-1\nD=M\n@ARG\nM=D\n");
+        asmFile.write("@R13\nAM=M-1\nD=M\n@LCL\nM=D\n");
+        asmFile.write("@R14\nA=M\n0;JMP\n");
+    }
+
+    public void writeFunction(String functionName, int numLocals) throws IOException {
+        currentFunction = functionName;
+        asmFile.write("(" + functionName + ")\n");
+        for (int i = 0; i < numLocals; i++) {
+            asmFile.write("@SP\nA=M\nM=0\n@SP\nM=M+1\n");
+        }
+    }
+
+    public void close() throws IOException {
+        asmFile.close();
+    }
+}
+
+public class VMTranslator {
+    public static void main(String[] args) throws IOException {
+        String vmPath = args[0];
+        if (vmPath.endsWith(".vm")) {
+            String asmPath = vmPath.substring(0, vmPath.length() - 3) + ".asm";
+            translate(vmPath, asmPath);
+        } else {
+            String asmPath = vmPath + "/" + vmPath.substring(vmPath.lastIndexOf("/") + 1) + ".asm";
+            translateAll(vmPath, asmPath);
+        }
+    }
+
+    private static void translate(String vmPath, String asmPath) throws IOException {
+        Parser parser = new Parser(vmPath);
+        CodeWriter writer = new CodeWriter(asmPath);
+        writer.setFileName(vmPath.substring(vmPath.lastIndexOf("/") + 1, vmPath.length() - 3));
+        while (parser.hasMoreCommands()) {
+            parser.advance();
+            String commandType = parser.getCommandType();
+            if (commandType.equals("arithmetic")) {
+                writer.writeArithmetic(parser.getArg1());
+            } else if (commandType.equals("push") || commandType.equals("pop")) {
+                writer.writePushPop(commandType, parser.getArg1(), parser.getArg2());
+            }
+        }
+        parser.close();
+        writer.close();
+    }
+
+    private static void translateAll(String vmPath, String asmPath) throws IOException {
+        CodeWriter writer = new CodeWriter(asmPath);
+        writer.writeInit();
+        for (String filePath : getVmFiles(vmPath)) {
+            translate(filePath, asmPath);
+        }
+        writer.close();
+    }
+
+    private static String[] getVmFiles(String vmPath) {
+        File folder = new File(vmPath);
+        File[] files = folder.listFiles((dir, name) -> name.endsWith(".vm"));
+        String[] filePaths = new String[files.length];
+        for (int i = 0; i < files.length; i++) {
+            filePaths[i] = files[i].getPath();
+        }
+        return filePaths;
+    }
+}
+```
+
 
 <h2 align="center"> Referencias</h2>
 
