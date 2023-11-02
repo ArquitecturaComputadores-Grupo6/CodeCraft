@@ -41,8 +41,15 @@ Para el traductor VM se implementaran 9 comandos aritmeticos = ["add", "sub", "n
 
 <p align="center"><img src="https://arquitecturacomputadores-grupo6.github.io/CodeCraft/practica5/images/pila.PNG" width="600" height="300" /></p> 
 
+Main: lee el archivo .vm línea por línea, escribe el código de ensamblador traducido en el archivo .asm.
+VMParser: Divide el comando de cada línea en operación, segmento de memoria y desplazamientos (o valor constante), luego llama a las funciones de escritura de código ensamblador en ASMWriter.
+ASMWriter: genera el código ensamblador basado en la función llamada por VMParser y los parámetros pasados.
+
+<p align="center"><img src="https://arquitecturacomputadores-grupo6.github.io/CodeCraft/practica5/images/vmtrad.PNG" width="400" height="300" /></p> 
 
 
+
+<p align="center"><img src="https://arquitecturacomputadores-grupo6.github.io/CodeCraft/practica5/images/diagrama.png" width="800" height="800" /></p> 
 <h2 align="center">Proyecto 8</h2>
 
 <p align="center"><img src="https://arquitecturacomputadores-grupo6.github.io/CodeCraft/practica5/images/pila.PNG" width="600" height="300" /></p> 
