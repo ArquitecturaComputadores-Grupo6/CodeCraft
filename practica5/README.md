@@ -37,11 +37,11 @@ Make everything as simple as possible, but not simpler.
 ```
 #### Proceso: 
 
-Para el traductor VM se implementaran 9 comandos aritmeticos = ["add", "sub", "neg", "eq", "gt", lt", "and, "or", "not"], Tambien contiene los comandos de accesso a memoria ["push", "pop"] y 8 segmentos de memoria ["constant", "static", "local", "argument", "pointer", "temp", "this", "that"]
+Para el traductor VM se implementaran 9 comandos aritmeticos = ["add", "sub", "neg", "eq", "gt", lt", "and, "or", "not"], Tambien contiene los comandos de accesso a memoria que interactuan con la pila  ["push", "pop"] y 8 segmentos de memoria ["constant", "static", "local", "argument", "pointer", "temp", "this", "that"], donde constatnt no es un segmento de memoria de acceso directo, solo es el valor que puede enviar a la pila pero devuelve nada, 
 
 <h2 align="center">Proyecto 8</h2>
 
-<p align="center"><img src="https://arquitecturacomputadores-grupo6.github.io/CodeCraft/practica5/images/vonnewman.png" width="600" height="300" /></p> 
+<p align="center"><img src="https://arquitecturacomputadores-grupo6.github.io/CodeCraft/practica5/images/pila.PNG" width="600" height="300" /></p> 
 
 ### ...
 
