@@ -49,7 +49,8 @@ ASMWriter: genera el código ensamblador basado en la función llamada por VMPar
 
 
 
-<p align="center"><img src="https://arquitecturacomputadores-grupo6.github.io/CodeCraft/practica5/images/diagrama.png" width="800" height="800" /></p> 
+<p align="center"><img src="https://arquitecturacomputadores-grupo6.github.io/CodeCraft/practica5/images/diagrama.PNG" width="800" height="800" /></p> 
+
 <h2 align="center">Proyecto 8</h2>
 
 <p align="center"><img src="https://arquitecturacomputadores-grupo6.github.io/CodeCraft/practica5/images/pila.PNG" width="600" height="300" /></p> 
