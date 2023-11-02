@@ -1,4 +1,4 @@
-<h1 align="center">Practica 3: </h1>
+<h1 align="center">Practica 5: </h1>
 
 Make everything as simple as possible, but not simpler.
 —Albert Einstein (1879–1955)
@@ -36,10 +36,8 @@ Make everything as simple as possible, but not simpler.
     input code
 ```
 #### Proceso: 
-Se almacena en la ram 2 el resultado en las iteraciones, y durante cada iteracion va sumando el valor de R0 y el numero de iteraciones será el valor de R1, y da como resultado la multiplicacion
 
-
-
+Para el traductor VM se implementaran 9 comandos aritmeticos = ["add", "sub", "neg", "eq", "gt", It", "and, "or", "not"]
 
 <h2 align="center">Proyecto 8</h2>
 
