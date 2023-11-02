@@ -292,4 +292,4 @@ Main: lee el archivo .vm línea por línea, escribe el código de ensamblador tr
 
 [3] https://www.youtube.com/watch?v=vj1veGsRdbw
 
-[4] https://github.com/JHonaker/nand2tetris/tree/master
+[4] https://github.com/kronosapiens/nand2tetris/tree/master
