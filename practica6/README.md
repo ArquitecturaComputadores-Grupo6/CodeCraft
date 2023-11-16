@@ -11,7 +11,7 @@ Un lenguaje de alto nivel es aquel que está diseñado para ser más comprensibl
 
 <h2 align="center">¿Qué se debe considerar para proponer un nuevo y buen lenguaje de programación, teniendo en cuenta la arquitectura de computador completa?</h2>
 
-rta
+Proponer un nuevo lenguaje de programación es un desafío complejo que requiere considerar varios aspectos, especialmente teniendo en cuenta la arquitectura completa de la computadora. Al considerar todos estos aspectos, los diseñadores de lenguajes pueden intentar crear un nuevo lenguaje de programación que se adapte bien a la arquitectura de computadora completa y sea útil, eficiente y fácil de usar para los programadores.
 
 <h2 align="center">Proyecto 9</h2>
 
