@@ -7,7 +7,11 @@ El Proyecto 9 de "Nand to Tetris" se centra en la creación de un compilador de 
 
 <h2 align="center">Desarrolle más el concepto de lenguaje de alto nivel, teniendo en cuenta la diferencia entre lenguajes de programación propiamente dichos e interpretadores.</h2>
 
-Responder 
+Un lenguaje de alto nivel es aquel que está diseñado para ser más comprensible y cercano al lenguaje humano, facilitando la escritura de programas complejos con estructuras y abstracciones más cercanas a la forma en que los humanos piensan y razonan. Estos lenguajes se caracterizan por utilizar un nivel de abstracción más alejado del hardware subyacente, lo que permite a los programadores concentrarse en la lógica del programa en lugar de en los detalles de bajo nivel de la máquina.
+
+<h2 align="center">¿Qué se debe considerar para proponer un nuevo y buen lenguaje de programación, teniendo en cuenta la arquitectura de computador completa?</h2>
+
+rta
 
 <h2 align="center">Proyecto 9</h2>
 
