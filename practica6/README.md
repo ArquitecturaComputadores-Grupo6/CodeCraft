@@ -18,7 +18,7 @@ Responder
 
 <p align="center"><img src="https://arquitecturacomputadores-grupo6.github.io/CodeCraft/practica6/images/vmtrad.PNG" width="800" height="300" /></p> 
 
-<p align="center"><img src="https://arquitecturacomputadores-grupo6.github.io/CodeCraft/practica5/images/diagrama.PNG" width="2000" height="800" /></p> 
+<p align="center"><img src="https://arquitecturacomputadores-grupo6.github.io/CodeCraft/practica6/images/diagrama.PNG" width="2000" height="800" /></p> 
 
 ```ruby
 class Ball {
