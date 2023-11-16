@@ -4,26 +4,188 @@ Make everything as simple as possible, but not simpler.
 —Albert Einstein (1879–1955)
 
 
-<p align="center"> <img src="https://arquitecturacomputadores-grupo6.github.io/CodeCraft/practica5/images/lenguajemaquina.PNG" width="700" height="250"/></p>
+<h2 align="center">Pregunta del proyecto</h2>
 
-En la practica 5 veremos que este capítulo describe los primeros pasos hacia la construcción de un compilador para un lenguaje de alto nivel basado en objetos típico. Abordaremos esta importante tarea en dos etapas, cada una que abarca dos capítulos De Nand a Tetris (Nand2tetris) Proyecto 7 y Proyecto 8, el proyecto 7 se refiere a Máquina Virtual I: Aritmética de Pila, la aritmética de pila se usa en muchas máquinas virtuales, incluyendo la máquina virtual Java, La aritmética de pila es un método eficiente para realizar operaciones aritméticas en una máquina virtual. Es un concepto fundamental que es importante entender para comprender el funcionamiento de muchas máquinas virtuales. El proyecto 7 introdujo la noción de máquina virtual (VM) y terminó con la construcción de una implementación básica de VM sobre la plataforma Hack. En este capítulo continuamos desarrollando la abstracción, el lenguaje y la implementación de VM. En particular, diseñamos mecanismos basados en pilas para manejar llamadas de subrutinas anidadas (procedimientos, funciones, métodos) de lenguajes procedimentales u orientados a objetos. Como el a medida que avanza el capítulo, ampliamos la implementación básica de VM previamente construida, terminando con un traductor de VM a gran escala. El proyecto 8 se refiere a Máquina Virtual II: Control del Programa, en la clase de Máquina Virtual II, se estudió el control del programa, un conjunto de instrucciones que permiten controlar el flujo de ejecución de un programa, el control del programa es un conjunto de instrucciones que permiten controlar el flujo de ejecución de un programa. Es un concepto fundamental que es importante entender para comprender el funcionamiento de muchas máquinas virtuales. 
 
-<h2 align="center">Teniendo en cuenta el marco de estas dos prácticas que son las máquinas virtuales. ¿Cuál cree que es el futuro de las máquinas virtuales? </h2>
-
-El futuro de las máquinas virtuales es brillante. Las máquinas virtuales ofrecen una serie de ventajas, como la portabilidad, la seguridad y la eficiencia, que las hacen ideales para una amplia gama de aplicaciones. Además, creo que veremos avances en la tecnología de máquinas virtuales que las harán aún más eficientes y fáciles de usar. Por ejemplo, las máquinas virtuales basadas en contenedores están ganando popularidad porque son más ligeras y eficientes que las máquinas virtuales tradicionales.
-  
-<h2 align="center">Proyecto 7</h2>
+<h2 align="center">Proyecto 9</h2>
 
 
 <p align="center"><img src="https://arquitecturacomputadores-grupo6.github.io/CodeCraft/practica5/images/pila.PNG" width="600" height="300" /></p> 
 
-Para el traductor VM se implementaran 9 comandos aritmeticos = ["add", "sub", "neg", "eq", "gt", lt", "and, "or", "not"], Tambien contiene los comandos de accesso a memoria que interactuan con la pila  ["push", "pop"] y 8 segmentos de memoria ["constant", "static", "local", "argument", "pointer", "temp", "this", "that"], donde constatnt no es un segmento de memoria de acceso directo, solo es el valor que puede enviar a la pila pero devuelve nada, Statics va de 16 a 255 en los segmentos, local es una variable local, el puntero es designado por el registro, argumento es la funcion a la cual dirige el puntero, temp valores temporales. 
+
 
 <p align="center"><img src="https://arquitecturacomputadores-grupo6.github.io/CodeCraft/practica5/images/vmtrad.PNG" width="800" height="300" /></p> 
 
 <p align="center"><img src="https://arquitecturacomputadores-grupo6.github.io/CodeCraft/practica5/images/diagrama.PNG" width="2000" height="800" /></p> 
 
-VMParser: Divide el comando de cada línea en operación, segmento de memoria y desplazamientos (o valor constante), luego llama a las funciones de escritura de código ensamblador en ASMWriter.
 ```ruby
-public void class main(String[] args){}
+class Ball {
+    field int x, y, xSpeed, ySpeed;
+
+    constructor Ball new(int startX, int startY, int startXSpeed, int startYSpeed) {
+        let x = startX;
+        let y = startY;
+        let xSpeed = startXSpeed;
+        let ySpeed = startYSpeed;
+        return this;
+    }
+
+    method void setDestination(int destX, int destY) {
+        let xSpeed = (destX - x) / 10;
+        let ySpeed = (destY - y) / 10;
+    }
+
+    method int getLeft() {
+        return x;
+    }
+
+    method int getRight() {
+        return x + 10;  // Assuming the ball has a width of 10
+    }
+
+    method void move() {
+        let x = x + xSpeed;
+        let y = y + ySpeed;
+
+        // Logic for bouncing off walls
+        if (x < 0 || x > 511) {
+            let xSpeed = -xSpeed;  // Reverse direction on hitting left or right wall
+        }
+
+        if (y < 0 || y > 239) {
+            let ySpeed = -ySpeed;  // Reverse direction on hitting top or bottom wall
+        }
+    }
+
+    method void bounce(int direction) {
+        // Logic for bouncing off bat
+        // For simplicity, assuming direction is -1 for left and 1 for right
+        let xSpeed = direction * Math.abs(xSpeed);
+        let ySpeed = -ySpeed;  // Reverse the ySpeed
+
+        // Adjust x and y coordinates based on direction
+        let x = x + xSpeed;
+        let y = y + ySpeed;
+    }
+
+}
+```
+
+```ruby
+lass PongGame {
+    static PongGame instance;
+    field Bat bat;
+    field Ball ball;
+    field boolean exit;
+    field int score;
+    field int batWidth;
+
+    constructor PongGame new() {
+        let batWidth = 50;
+        let bat = Bat.new(230, 229, batWidth, 7);
+        let ball = Ball.new(253, 222, 0, 511, 0, 229);
+        do ball.setDestination(400, 0);
+
+        let exit = false;
+        let score = 0;
+
+        return this;
+    }
+
+    method void dispose() {
+        do bat.dispose();
+        do ball.dispose();
+        do Memory.deAlloc(this);
+        return;
+    }
+
+    function void newInstance() {
+        let instance = PongGame.new();
+        return;
+    }
+
+    function PongGame getInstance() {
+        return instance;
+    }
+
+    method void run() {
+        var char key;
+
+        while (~exit) {
+            let key = Keyboard.keyPressed();
+
+            if (key = 130) {
+                do bat.setDirection(1);
+            } else {
+                if (key = 132) {
+                    do bat.setDirection(2);
+                } else {
+                    if (key = 140) {
+                        let exit = true;
+                    }
+                }
+            }
+
+            do bat.move();
+            do moveBall();
+
+            do Sys.wait(16);  // Adjust game speed
+        }
+
+        if (exit) {
+            do Output.moveCursor(10, 27);
+            do Output.printString("Game Over");
+        }
+
+        return;
+    }
+
+    method void moveBall() {
+        var int bouncingDirection, batLeft, batRight, ballLeft, ballRight;
+
+        let wall = ball.move();
+
+        if ((wall > 0) & (wall != lastWall)) {
+            let lastWall = wall;
+            let bouncingDirection = 0;
+            let batLeft = bat.getLeft();
+            let batRight = bat.getRight();
+            let ballLeft = ball.getLeft();
+            let ballRight = ball.getRight();
+
+            if (wall = 4) {
+                let exit = (batLeft > ballRight) | (batRight < ballLeft);
+                if (~exit) {
+                    if (ballRight < (batLeft + 10)) {
+                        let bouncingDirection = -1;
+                    } else {
+                        if (ballLeft > (batRight - 10)) {
+                            let bouncingDirection = 1;
+                        }
+                    }
+
+                    let batWidth = batWidth - 2;
+                    do bat.setWidth(batWidth);
+                    let score = score + 1;
+                    do Output.moveCursor(22, 7);
+                    do Output.printInt(score);
+                }
+            }
+
+            do ball.bounce(bouncingDirection);
+        }
+
+        return;
+    }
+}
+```
+```ruby
+class Main {
+    function void main() {
+        var PongGame game;
+        let game = PongGame.new();
+        do game.run();
+        return;
+    }
+}
 ```
