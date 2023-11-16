@@ -1,0 +1,50 @@
+class Ball {
+    field int x, y, xSpeed, ySpeed;
+
+    constructor Ball new(int startX, int startY, int startXSpeed, int startYSpeed) {
+        let x = startX;
+        let y = startY;
+        let xSpeed = startXSpeed;
+        let ySpeed = startYSpeed;
+        return this;
+    }
+
+    method void setDestination(int destX, int destY) {
+        let xSpeed = (destX - x) / 10;
+        let ySpeed = (destY - y) / 10;
+    }
+
+    method int getLeft() {
+        return x;
+    }
+
+    method int getRight() {
+        return x + 10;  // Assuming the ball has a width of 10
+    }
+
+    method void move() {
+        let x = x + xSpeed;
+        let y = y + ySpeed;
+
+        // Logic for bouncing off walls
+        if (x < 0 || x > 511) {
+            let xSpeed = -xSpeed;  // Reverse direction on hitting left or right wall
+        }
+
+        if (y < 0 || y > 239) {
+            let ySpeed = -ySpeed;  // Reverse direction on hitting top or bottom wall
+        }
+    }
+
+    method void bounce(int direction) {
+        // Logic for bouncing off bat
+        // For simplicity, assuming direction is -1 for left and 1 for right
+        let xSpeed = direction * Math.abs(xSpeed);
+        let ySpeed = -ySpeed;  // Reverse the ySpeed
+
+        // Adjust x and y coordinates based on direction
+        let x = x + xSpeed;
+        let y = y + ySpeed;
+    }
+
+}
