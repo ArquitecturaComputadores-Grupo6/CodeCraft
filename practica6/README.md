@@ -3,18 +3,20 @@
 Make everything as simple as possible, but not simpler.
 —Albert Einstein (1879–1955)
 
+Resumen
 
-<h2 align="center">Pregunta del proyecto</h2>
+<h2 align="center">Desarrolle más el concepto de lenguaje de alto nivel, teniendo en cuenta la diferencia entre lenguajes de programación propiamente dichos e interpretadores.</h2>
 
+Responder 
 
 <h2 align="center">Proyecto 9</h2>
 
 
-<p align="center"><img src="https://arquitecturacomputadores-grupo6.github.io/CodeCraft/practica5/images/pila.PNG" width="600" height="300" /></p> 
+<p align="center"><img src="https://arquitecturacomputadores-grupo6.github.io/CodeCraft/practica6/images/pila.PNG" width="600" height="300" /></p> 
 
 
 
-<p align="center"><img src="https://arquitecturacomputadores-grupo6.github.io/CodeCraft/practica5/images/vmtrad.PNG" width="800" height="300" /></p> 
+<p align="center"><img src="https://arquitecturacomputadores-grupo6.github.io/CodeCraft/practica6/images/vmtrad.PNG" width="800" height="300" /></p> 
 
 <p align="center"><img src="https://arquitecturacomputadores-grupo6.github.io/CodeCraft/practica5/images/diagrama.PNG" width="2000" height="800" /></p> 
 
