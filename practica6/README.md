@@ -3,7 +3,7 @@
 Make everything as simple as possible, but not simpler.
 —Albert Einstein (1879–1955)
 
-Resumen
+El Proyecto 9 de "Nand to Tetris" se centra en la creación de un compilador de alto nivel para un lenguaje de programación simple llamado Jack. El objetivo principal es diseñar un programa que traduzca el código escrito en Jack a código de máquina entendible por la plataforma Hack Assembly Language, que es el lenguaje de bajo nivel específico de la arquitectura Hack. El proceso de compilación completo implica una serie de pasos que van desde la traducción del código Jack hasta la generación de código de máquina ejecutable. Se trabajo en cada etapa del compilador, implementando algoritmos y estructuras de datos adecuadas para lograr la transformación correcta y eficiente del código. Al finalizar el Proyecto 9, se tiene un compilador funcional que puede convertir código escrito en Jack a código de máquina Hack Assembly Language, lo que brinda una comprensión más profunda de los conceptos detrás de la compilación y el funcionamiento interno de los lenguajes de programación.
 
 <h2 align="center">Desarrolle más el concepto de lenguaje de alto nivel, teniendo en cuenta la diferencia entre lenguajes de programación propiamente dichos e interpretadores.</h2>
 
