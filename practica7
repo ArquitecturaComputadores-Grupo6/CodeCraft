@@ -65,50 +65,57 @@
       <div class="row">
         <div class="col-md-6 offset-md-2">
           <h2 class="custom_heading">
-            PROYECTO <span>FINAL</span>
+            Video <span>Practica 7</span>
           </h2>
-          <div class="container layout_padding2">
-            <div class="row">
-              <div class="col-md-4">
+
+          <div class="col-md-6">
                 <div class="img_box">
-                  <img src="images/video1.png" alt="">
+                  <img src="images/video" alt="">
                 </div>
                 <div class="detail_box">
                   <h6>
-                    Video: Isidro
+                    Video Vanessa
                   </h6>
                 </div>
-              </div>
+                <div class="btn-box">
+                  <a  href="https://github.com/ArquitecturaComputadores-Grupo6/CodeCraft/tree/main/practica7v/vanessa" class="btn-2">
+                    Link
+                  </a>
+                </div>
             </div>
-          </div>
-          <div class="container layout_padding2">
-            <div class="row">
-              <div class="col-md-4">
+
+            <div class="col-md-6">
                 <div class="img_box">
-                  <img src="images/proyectofinal.png" alt="">
+                  <img src="images/video" alt="">
                 </div>
                 <div class="detail_box">
                   <h6>
-                    Video: Vanessa
+                    Video Geiner
                   </h6>
                 </div>
-              </div>
+                <div class="btn-box">
+                  <a  href="https://github.com/ArquitecturaComputadores-Grupo6/CodeCraft/tree/main/practica7v/geiner" class="btn-2">
+                    Link
+                  </a>
+                </div>
             </div>
-          </div>
-          <div class="container layout_padding2">
-            <div class="row">
-              <div class="col-md-4">
+
+            <div class="col-md-6">
                 <div class="img_box">
-                  <img src="images/proyectofinal.png" alt="">
+                  <img src="images/video" alt="">
                 </div>
                 <div class="detail_box">
                   <h6>
-                    Video: Geiner
+                    Video Isidro
                   </h6>
                 </div>
-              </div>
+                <div class="btn-box">
+                  <a  href="https://github.com/ArquitecturaComputadores-Grupo6/CodeCraft/tree/main/practica7v/isidro" class="btn-2">
+                    Link
+                  </a>
+                </div>
             </div>
-          </div>
+
         </div>
       </div>
     </div>
